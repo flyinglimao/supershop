@@ -891,7 +891,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.19.4, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.0":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.19.4, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.22.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.0":
   version: 7.26.0
   resolution: "@babel/runtime@npm:7.26.0"
   dependencies:
@@ -936,6 +936,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@coinbase/onchainkit@npm:^0.35.5":
+  version: 0.35.5
+  resolution: "@coinbase/onchainkit@npm:0.35.5"
+  dependencies:
+    "@rainbow-me/rainbowkit": "npm:^2.1.3"
+    "@tanstack/react-query": "npm:^5"
+    clsx: "npm:^2.1.1"
+    graphql: "npm:^14 || ^15 || ^16"
+    graphql-request: "npm:^6.1.0"
+    permissionless: "npm:^0.1.29"
+    tailwind-merge: "npm:^2.3.0"
+    viem: "npm:^2.17.4"
+    wagmi: "npm:^2.11.0"
+  peerDependencies:
+    "@types/react": ^18
+    "@xmtp/frames-validator": ^0.6.0
+    react: ^18
+    react-dom: ^18
+  checksum: 10c0/c480823facac0cbd073cf2602418dbf5a54ddbe9d572fcc0ac7f51659f3ec412e569ab407dbdf777e2e0e2c31be902a3f522e557180d072f93193ae38fcfd9d6
+  languageName: node
+  linkType: hard
+
 "@coinbase/wallet-sdk@npm:4.0.4":
   version: 4.0.4
   resolution: "@coinbase/wallet-sdk@npm:4.0.4"
@@ -962,28 +984,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dynamic-labs/assert-package-version@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/assert-package-version@npm:3.6.2"
+"@dynamic-labs/assert-package-version@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/assert-package-version@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/logger": "npm:3.6.2"
-  checksum: 10c0/d513edbe8710686163c36f5a8489706767633ec0a7b285c8b602f983d88234e226fd0174be15f5885208ea6d640e41d6109feb2fd235a1f00d06af832e458aeb
+    "@dynamic-labs/logger": "npm:3.6.3"
+  checksum: 10c0/a6f69cb0a312436fe6fa951d6d137c1e6f1b87458db6c8b6e7d8579ade35e40ee08e88da3e97d32ad5ae48a2834e2a2b74fba64aca3b64e10adc625018bf69fb
   languageName: node
   linkType: hard
 
-"@dynamic-labs/embedded-wallet-evm@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/embedded-wallet-evm@npm:3.6.2"
+"@dynamic-labs/embedded-wallet-evm@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/embedded-wallet-evm@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/embedded-wallet": "npm:3.6.2"
-    "@dynamic-labs/ethereum-core": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/embedded-wallet": "npm:3.6.3"
+    "@dynamic-labs/ethereum-core": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/types": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
-    "@dynamic-labs/webauthn": "npm:3.6.2"
+    "@dynamic-labs/types": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
+    "@dynamic-labs/webauthn": "npm:3.6.3"
     "@turnkey/api-key-stamper": "npm:0.4.1"
     "@turnkey/http": "npm:2.12.2"
     "@turnkey/iframe-stamper": "npm:2.0.0"
@@ -991,137 +1013,137 @@ __metadata:
     "@turnkey/webauthn-stamper": "npm:0.5.0"
   peerDependencies:
     viem: ^2.7.6
-  checksum: 10c0/be0564ccb59641407f6a202293df06e0859c590f129d637a0e3b520df8736e49d65a07ab5c54ad4ffe538ae4e7e65253a935e577d6259cbdb240065f5342f5bb
+  checksum: 10c0/53c23c9d458ae0bf363212b8eb52a50f49b3a6251dc0d9690f3bd20ed92200220a605097424bf8976fe1d63fbe3939a6a419f1ce91aecb3058d7d46627b24768
   languageName: node
   linkType: hard
 
-"@dynamic-labs/embedded-wallet@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/embedded-wallet@npm:3.6.2"
+"@dynamic-labs/embedded-wallet@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/embedded-wallet@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
-    "@dynamic-labs/webauthn": "npm:3.6.2"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
+    "@dynamic-labs/webauthn": "npm:3.6.3"
     "@turnkey/api-key-stamper": "npm:0.4.1"
     "@turnkey/http": "npm:2.12.2"
     "@turnkey/iframe-stamper": "npm:2.0.0"
     "@turnkey/webauthn-stamper": "npm:0.5.0"
-  checksum: 10c0/78e0144eec69f24abecc14ca612f070aaa756405444eacdfc8dab154743ffdf1c087149dddeec1bd4907b1191c239da8d1cac903f48931aaf282323c491d403d
+  checksum: 10c0/bd97d21ceaf2f667dbc37bd4827f6c64db1410f2ea28562078c8e7b5e9f65ee51055723984546ed59814d6dddc524af85d06ef8e9213080987246f997613baf3
   languageName: node
   linkType: hard
 
 "@dynamic-labs/ethereum-aa@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/ethereum-aa@npm:3.6.2"
+  version: 3.6.3
+  resolution: "@dynamic-labs/ethereum-aa@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/ethereum-core": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/ethereum-core": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/types": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
+    "@dynamic-labs/types": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
     "@zerodev/ecdsa-validator": "npm:5.3.1"
     "@zerodev/multi-chain-validator": "npm:5.3.3"
     "@zerodev/sdk": "npm:5.3.4"
     permissionless: "npm:^0.1.20"
   peerDependencies:
     viem: ^2.7.6
-  checksum: 10c0/de897bb796cb53557cd5e7ca5e0c2e3eba4581c9d0d08dd84bda47ae88d79eb0189af1aac2ce02e29f18071b55806eec35cbc49c1a9233b9f0004d6e4aa0aace
+  checksum: 10c0/c13346690d8c31280e62fdefe4b43f43e816d11175d1967f3cc669eb25dd3f6d87afd9cdef1df9569a617f988831e6f94991a469e22e78b15b277f13d320779f
   languageName: node
   linkType: hard
 
-"@dynamic-labs/ethereum-core@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/ethereum-core@npm:3.6.2"
+"@dynamic-labs/ethereum-core@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/ethereum-core@npm:3.6.3"
   dependencies:
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
   peerDependencies:
-    "@dynamic-labs/assert-package-version": 3.6.2
-    "@dynamic-labs/logger": 3.6.2
-    "@dynamic-labs/rpc-providers": 3.6.2
-    "@dynamic-labs/types": 3.6.2
-    "@dynamic-labs/utils": 3.6.2
-    "@dynamic-labs/wallet-book": 3.6.2
-    "@dynamic-labs/wallet-connector-core": 3.6.2
+    "@dynamic-labs/assert-package-version": 3.6.3
+    "@dynamic-labs/logger": 3.6.3
+    "@dynamic-labs/rpc-providers": 3.6.3
+    "@dynamic-labs/types": 3.6.3
+    "@dynamic-labs/utils": 3.6.3
+    "@dynamic-labs/wallet-book": 3.6.3
+    "@dynamic-labs/wallet-connector-core": 3.6.3
     viem: ^2.7.6
-  checksum: 10c0/086d2ab8e7126839ebbbd1ec63ccf59b30c3f526ca1ed67330961b05cd2c05c6e324621f49590c16af3b57da872d26e60e21dc2b4fe4f30b2312904e25d77a70
+  checksum: 10c0/54fb001bbf4174291990befae786654600f2b208f5d559a8b924cbc6fe5b01d3f8245bf9951ae4c0612257259eb83f87b3e6b88c7244ed6e0261c969432b6ceb
   languageName: node
   linkType: hard
 
 "@dynamic-labs/ethereum@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/ethereum@npm:3.6.2"
+  version: 3.6.3
+  resolution: "@dynamic-labs/ethereum@npm:3.6.3"
   dependencies:
     "@coinbase/wallet-sdk": "npm:4.0.4"
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/embedded-wallet-evm": "npm:3.6.2"
-    "@dynamic-labs/ethereum-core": "npm:3.6.2"
-    "@dynamic-labs/types": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/embedded-wallet-evm": "npm:3.6.3"
+    "@dynamic-labs/ethereum-core": "npm:3.6.3"
+    "@dynamic-labs/types": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
     "@walletconnect/ethereum-provider": "npm:2.11.2"
     "@walletconnect/types": "npm:2.10.6"
     buffer: "npm:6.0.3"
     eventemitter3: "npm:5.0.1"
   peerDependencies:
     viem: ^2.7.6
-  checksum: 10c0/658120ab7f370e3afb97a7f836e57eb206d5887eae075e92bcd626c451398d06f7c69789fac6abba789a698233b927b5383caf7db823865e383131daacbf3920
+  checksum: 10c0/060db117372ab0f57cace5b1c8055649c636a38253b598aa573e13de66708c3bd361b95bcf8ccdf04938c5000f8b7c67d8c2de48527bfbc6e94e140ea0364973
   languageName: node
   linkType: hard
 
-"@dynamic-labs/iconic@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/iconic@npm:3.6.2"
+"@dynamic-labs/iconic@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/iconic@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
     sharp: "npm:0.33.2"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/a3cf0fabae35b3f28f5c0b6c7ca5debcd1a72d32e9546319795a8617f4f344a39d9d169960f0da3fde4522afeaa95613f24558053429c6678ae6bc53c5046db0
+  checksum: 10c0/bfcbd0430060619b9a01ddefadf3f93dff97537f6ad47ca8c78b68aef9b11b4aa20d972f845c3c79dd60f8813e225adc90bae1b0f55d1c098c579159c89b4f8c
   languageName: node
   linkType: hard
 
-"@dynamic-labs/logger@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/logger@npm:3.6.2"
+"@dynamic-labs/logger@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/logger@npm:3.6.3"
   peerDependencies:
     eventemitter3: 5.0.1
-  checksum: 10c0/478f57f353993ff22ee9f3ebb5c155f428f7223181bcf4125af7241eaecad9c2e2eadea334f3203ea3a9cf794d850acd38bad53a8d51329938584a2fd303f038
+  checksum: 10c0/08ac54c7110481f6bab3bbcdaabe777545bc769817aa94870af1fb1ec93ab21954f8895301984104c2af8d549fe2f66884baf4e0b42f4df7892736c0778f8ad6
   languageName: node
   linkType: hard
 
-"@dynamic-labs/multi-wallet@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/multi-wallet@npm:3.6.2"
+"@dynamic-labs/multi-wallet@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/multi-wallet@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/rpc-providers": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/rpc-providers": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/types": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
+    "@dynamic-labs/types": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
     tslib: "npm:2.4.1"
-  checksum: 10c0/7bfb1e9cbc6aec062e46c48c45bfdfa41d34050fa465ac68e3fdb946d4826fbd30d9d1e46cf1a8c8a27a65af5acfa3f8872360507e415c1e5400eaff0c2fb607
+  checksum: 10c0/9d39415be319a208d00f5ed8733bd4c47d9095b4610971f19bb09d623855d1db98926e43e3a888137a2a7e78b82627d7ec3bc02e40a66517c35bcd5d2b06311f
   languageName: node
   linkType: hard
 
-"@dynamic-labs/rpc-providers@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/rpc-providers@npm:3.6.2"
+"@dynamic-labs/rpc-providers@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/rpc-providers@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/types": "npm:3.6.2"
-  checksum: 10c0/a21427b8f7ffaa663c4226cacd7a6b27a5ca991c6aa533e5df6136e98755f5ab0711e45fdaf94cca90756247cbebd497c4b31747d5cfb971a58b5adc6509fe75
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/types": "npm:3.6.3"
+  checksum: 10c0/b02009031129f5cfc820ddad39188852cc61fd1709ecb72685607b273b885d7c5061bd945a3517df4ca20a4717620cfa4bb0405b254403062eb2ce8b289e8d25
   languageName: node
   linkType: hard
 
@@ -1133,20 +1155,20 @@ __metadata:
   linkType: hard
 
 "@dynamic-labs/sdk-react-core@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/sdk-react-core@npm:3.6.2"
+  version: 3.6.3
+  resolution: "@dynamic-labs/sdk-react-core@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/iconic": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
-    "@dynamic-labs/multi-wallet": "npm:3.6.2"
-    "@dynamic-labs/rpc-providers": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/iconic": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
+    "@dynamic-labs/multi-wallet": "npm:3.6.3"
+    "@dynamic-labs/rpc-providers": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/store": "npm:3.6.2"
-    "@dynamic-labs/types": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
-    "@dynamic-labs/wallet-book": "npm:3.6.2"
-    "@dynamic-labs/wallet-connector-core": "npm:3.6.2"
+    "@dynamic-labs/store": "npm:3.6.3"
+    "@dynamic-labs/types": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
+    "@dynamic-labs/wallet-book": "npm:3.6.3"
+    "@dynamic-labs/wallet-connector-core": "npm:3.6.3"
     "@hcaptcha/react-hcaptcha": "npm:1.4.4"
     bs58: "npm:5.0.0"
     country-list: "npm:2.3.0"
@@ -1161,108 +1183,108 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/198b81639dc55b39388a74e7e9065c7f6a5169f7881184af92686b377d79e4f333d265b9e8d82f943e2a5d20542b50e613f5ce9987145f59acc41f72552698dc
+  checksum: 10c0/40059e731c5c1d8b85afa9852773b7be406d8938e336ed02c4f90bacedeb2ef6c0a159b5341deb522835957dc7d3e9f4e793410555b180585f1ceac85561ea09
   languageName: node
   linkType: hard
 
-"@dynamic-labs/store@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/store@npm:3.6.2"
+"@dynamic-labs/store@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/store@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
-  checksum: 10c0/ae22f74e3d204815b3d27dc410dff19f14300ca0da171c9f1fcd52a1a13bc61a4bf781b05be3df854d1934adf31dbebcd8b6c1abcfb5b55314e1d066652afb1f
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
+  checksum: 10c0/4d99201c843ecee42617d291ed75e421b3a63260fa3a69044e3270b75b3ecb88d8ece5acca029ef9eade231be66561da0edcbfd34a441d6b7b6a57a08a90a073
   languageName: node
   linkType: hard
 
-"@dynamic-labs/types@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/types@npm:3.6.2"
+"@dynamic-labs/types@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/types@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-  checksum: 10c0/e0a3156292bf2865f99f91411e5d7d12d8134c9b364f8ddf39fe0f7468c315862f00f842127d2ac7f5d3e217e3591b82050015dcf43365cc8bc79814f7ff206d
+  checksum: 10c0/5efd80cc24608cbc8b235641392d8019af1b09baf4c7b04d895d1207e01f143fb91973e1724d6d2c52a6952a89f251829c638688eb586e994d8eac49dbe8b71d
   languageName: node
   linkType: hard
 
-"@dynamic-labs/utils@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/utils@npm:3.6.2"
+"@dynamic-labs/utils@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/utils@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
-    "@dynamic-labs/types": "npm:3.6.2"
+    "@dynamic-labs/types": "npm:3.6.3"
     buffer: "npm:6.0.3"
     eventemitter3: "npm:5.0.1"
     tldts: "npm:6.0.16"
-  checksum: 10c0/3db31cfcf9635a8c2ee0caf5dc58434b950e99ed0699c5b8a4500af41e6c50597714da7b24a344695c4ebb5d75bf84fb5b7ce412a0021f5446c3690ef7ec4e8c
+  checksum: 10c0/3a64db9e50e3a96fafce80a396ebb08a1d4e3a69aaf74e44291ba90f701c695e7c95bb77828efc56c62990c587801fdc8f8876ffbf5b3e3b960bbe67f52ab28d
   languageName: node
   linkType: hard
 
 "@dynamic-labs/wagmi-connector@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/wagmi-connector@npm:3.6.2"
+  version: 3.6.3
+  resolution: "@dynamic-labs/wagmi-connector@npm:3.6.3"
   peerDependencies:
-    "@dynamic-labs/assert-package-version": 3.6.2
-    "@dynamic-labs/ethereum-core": 3.6.2
-    "@dynamic-labs/logger": 3.6.2
-    "@dynamic-labs/rpc-providers": 3.6.2
-    "@dynamic-labs/sdk-react-core": 3.6.2
-    "@dynamic-labs/types": 3.6.2
-    "@dynamic-labs/wallet-connector-core": 3.6.2
+    "@dynamic-labs/assert-package-version": 3.6.3
+    "@dynamic-labs/ethereum-core": 3.6.3
+    "@dynamic-labs/logger": 3.6.3
+    "@dynamic-labs/rpc-providers": 3.6.3
+    "@dynamic-labs/sdk-react-core": 3.6.3
+    "@dynamic-labs/types": 3.6.3
+    "@dynamic-labs/wallet-connector-core": 3.6.3
     "@wagmi/core": ^2.6.4
     eventemitter3: 5.0.1
     react: ^18.0.0
     viem: ^2.7.6
     wagmi: ^2.5.7
-  checksum: 10c0/dd8efed47b3ecc8dcbd4fb3aa429f84e4ef1073eda0b27794283b1f1b521c0fbf0e7ca081373107799e7903b7ea43076ece03f4613e50cca25245662ef197f09
+  checksum: 10c0/dcae2e069f02a8a3a3fc8e081ceb20d733e37305e6fc6f895e0fcbce0e5a8902b3f8729c7c9f12fddd851cdfd674adf8fd0ac53e71ab053222b08cdfa6092189
   languageName: node
   linkType: hard
 
-"@dynamic-labs/wallet-book@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/wallet-book@npm:3.6.2"
+"@dynamic-labs/wallet-book@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/wallet-book@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/iconic": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
-    "@dynamic-labs/utils": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/iconic": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
+    "@dynamic-labs/utils": "npm:3.6.3"
     util: "npm:0.12.5"
     zod: "npm:3.22.4"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 10c0/c91c52b0c5c37f07d97f1c1d927df4af229e93728be0b602f6a3a1f900fe3c337701e4da8d5fb2950c1e4526ca3c3910eeea7f53063206f10d24e55a3eb7c621
+  checksum: 10c0/777192b0da0a1a7afdd16ca7c4e81d7b1352ba2f60032f1c3fb0978e742b4d6144b1b9691082dc45e4aaab424e986c347732255a8caad97408d1d3d90a598dd7
   languageName: node
   linkType: hard
 
-"@dynamic-labs/wallet-connector-core@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/wallet-connector-core@npm:3.6.2"
+"@dynamic-labs/wallet-connector-core@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/wallet-connector-core@npm:3.6.3"
   dependencies:
     "@dynamic-labs/sdk-api-core": "npm:0.0.563"
   peerDependencies:
-    "@dynamic-labs/assert-package-version": 3.6.2
-    "@dynamic-labs/logger": 3.6.2
-    "@dynamic-labs/rpc-providers": 3.6.2
-    "@dynamic-labs/types": 3.6.2
-    "@dynamic-labs/utils": 3.6.2
-    "@dynamic-labs/wallet-book": 3.6.2
+    "@dynamic-labs/assert-package-version": 3.6.3
+    "@dynamic-labs/logger": 3.6.3
+    "@dynamic-labs/rpc-providers": 3.6.3
+    "@dynamic-labs/types": 3.6.3
+    "@dynamic-labs/utils": 3.6.3
+    "@dynamic-labs/wallet-book": 3.6.3
     eventemitter3: 5.0.1
-  checksum: 10c0/35cec02b4c0b820c274b90ff3b6a1ee1ed53bf0ce666cd295c9c9350cb681098a247c065313e50a1196503e1c4683e640dcd880d1ce302e2251f243a6a2479a2
+  checksum: 10c0/7ecf59ae39423705dbb1ae92d4dcb10f64a9e3dbdec983064b23b9cbde0817e26f48725a137403237b6d2efdf368eff50a48fcd134b626ff7b538b8bd9b298f8
   languageName: node
   linkType: hard
 
-"@dynamic-labs/webauthn@npm:3.6.2":
-  version: 3.6.2
-  resolution: "@dynamic-labs/webauthn@npm:3.6.2"
+"@dynamic-labs/webauthn@npm:3.6.3":
+  version: 3.6.3
+  resolution: "@dynamic-labs/webauthn@npm:3.6.3"
   dependencies:
-    "@dynamic-labs/assert-package-version": "npm:3.6.2"
-    "@dynamic-labs/logger": "npm:3.6.2"
+    "@dynamic-labs/assert-package-version": "npm:3.6.3"
+    "@dynamic-labs/logger": "npm:3.6.3"
     "@simplewebauthn/browser": "npm:9.0.1"
     "@simplewebauthn/types": "npm:9.0.1"
-  checksum: 10c0/98499293f66762dadf564ac335d276219938abe2a23c2ae5eb6499f6806e5fde171736770a27994d1d4e21ea9e3ef78111ea79b8d3608f6d937b9c1ef297d1b7
+  checksum: 10c0/3e3119ca5043b608be5f2295ef740fb905471b9957e6f53bb85ee9f5926fd57ec27ddaa33458816420e5c99fac243c1eb0fac60a2b39d931657c6f5760a3e106
   languageName: node
   linkType: hard
 
@@ -1284,12 +1306,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/runtime@npm:^1.2.0":
-  version: 1.3.1
-  resolution: "@emnapi/runtime@npm:1.3.1"
-  dependencies:
-    tslib: "npm:^2.4.0"
-  checksum: 10c0/060ffede50f1b619c15083312b80a9e62a5b0c87aa8c1b54854c49766c9d69f8d1d3d87bd963a647071263a320db41b25eaa50b74d6a80dcc763c23dbeaafd6c
+"@emotion/hash@npm:^0.9.0":
+  version: 0.9.2
+  resolution: "@emotion/hash@npm:0.9.2"
+  checksum: 10c0/0dc254561a3cc0a06a10bbce7f6a997883fd240c8c1928b93713f803a2e9153a257a488537012efe89dbe1246f2abfe2add62cdb3471a13d67137fcb808e81c2
   languageName: node
   linkType: hard
 
@@ -1374,6 +1394,15 @@ __metadata:
     ethereum-cryptography: "npm:^2.0.0"
     micro-ftch: "npm:^0.3.1"
   checksum: 10c0/4e6e0449236f66b53782bab3b387108f0ddc050835bfe1381c67a7c038fea27cb85ab38851d98b700957022f0acb6e455ca0c634249cfcce1a116bad76500160
+  languageName: node
+  linkType: hard
+
+"@graphql-typed-document-node/core@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "@graphql-typed-document-node/core@npm:3.2.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 10c0/94e9d75c1f178bbae8d874f5a9361708a3350c8def7eaeb6920f2c820e82403b7d4f55b3735856d68e145e86c85cbfe2adc444fdc25519cd51f108697e99346c
   languageName: node
   linkType: hard
 
@@ -1490,35 +1519,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-darwin-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-darwin-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@img/sharp-darwin-x64@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-darwin-x64@npm:0.33.2"
   dependencies:
     "@img/sharp-libvips-darwin-x64": "npm:1.0.1"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-darwin-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-darwin-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.4"
   dependenciesMeta:
     "@img/sharp-libvips-darwin-x64":
       optional: true
@@ -1533,23 +1538,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-libvips-darwin-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-darwin-arm64@npm:1.0.4"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@img/sharp-libvips-darwin-x64@npm:1.0.1":
   version: 1.0.1
   resolution: "@img/sharp-libvips-darwin-x64@npm:1.0.1"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-darwin-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-darwin-x64@npm:1.0.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -1561,23 +1552,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-libvips-linux-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-arm64@npm:1.0.4"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@img/sharp-libvips-linux-arm@npm:1.0.1":
   version: 1.0.1
   resolution: "@img/sharp-libvips-linux-arm@npm:1.0.1"
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-arm@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@img/sharp-libvips-linux-arm@npm:1.0.5"
   conditions: os=linux & cpu=arm & libc=glibc
   languageName: node
   linkType: hard
@@ -1589,23 +1566,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-libvips-linux-s390x@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-s390x@npm:1.0.4"
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@img/sharp-libvips-linux-x64@npm:1.0.1":
   version: 1.0.1
   resolution: "@img/sharp-libvips-linux-x64@npm:1.0.1"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-x64@npm:1.0.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -1617,23 +1580,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-libvips-linuxmusl-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linuxmusl-arm64@npm:1.0.4"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
 "@img/sharp-libvips-linuxmusl-x64@npm:1.0.1":
   version: 1.0.1
   resolution: "@img/sharp-libvips-linuxmusl-x64@npm:1.0.1"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linuxmusl-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linuxmusl-x64@npm:1.0.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
@@ -1643,18 +1592,6 @@ __metadata:
   resolution: "@img/sharp-linux-arm64@npm:0.33.2"
   dependencies:
     "@img/sharp-libvips-linux-arm64": "npm:1.0.1"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.4"
   dependenciesMeta:
     "@img/sharp-libvips-linux-arm64":
       optional: true
@@ -1674,35 +1611,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-linux-arm@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-arm@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-arm": "npm:1.0.5"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@img/sharp-linux-s390x@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-linux-s390x@npm:0.33.2"
   dependencies:
     "@img/sharp-libvips-linux-s390x": "npm:1.0.1"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-s390x@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-s390x@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.4"
   dependenciesMeta:
     "@img/sharp-libvips-linux-s390x":
       optional: true
@@ -1722,35 +1635,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-linux-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-x64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
 "@img/sharp-linuxmusl-arm64@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-linuxmusl-arm64@npm:0.33.2"
   dependencies:
     "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.1"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linuxmusl-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linuxmusl-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.4"
   dependenciesMeta:
     "@img/sharp-libvips-linuxmusl-arm64":
       optional: true
@@ -1770,32 +1659,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-linuxmusl-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linuxmusl-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
 "@img/sharp-wasm32@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-wasm32@npm:0.33.2"
   dependencies:
     "@emnapi/runtime": "npm:^0.45.0"
-  conditions: cpu=wasm32
-  languageName: node
-  linkType: hard
-
-"@img/sharp-wasm32@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-wasm32@npm:0.33.5"
-  dependencies:
-    "@emnapi/runtime": "npm:^1.2.0"
   conditions: cpu=wasm32
   languageName: node
   linkType: hard
@@ -1807,23 +1675,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@img/sharp-win32-ia32@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-win32-ia32@npm:0.33.5"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
 "@img/sharp-win32-x64@npm:0.33.2":
   version: 0.33.2
   resolution: "@img/sharp-win32-x64@npm:0.33.2"
-  conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-win32-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-win32-x64@npm:0.33.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2311,10 +2165,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/env@npm:15.0.3"
-  checksum: 10c0/63582fed80d6a28fff102c935095da71fd57ddf6b5f5d564e85ebdefdeb93298f7f7cf7d813c75b460c6627106717ea959b4c232939e7abb97d73d8b8467d4cd
+"@next/env@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/env@npm:14.2.15"
+  checksum: 10c0/b1af95941bd7e080276af0901512c8c56b4e157402d2d913feca435c6a6f01130c9f322cca67e5c2b1ca160f54f6c0c4913fb8a3201812a5bb62dbdccae6f8fa
   languageName: node
   linkType: hard
 
@@ -2327,58 +2181,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-darwin-arm64@npm:15.0.3"
+"@next/swc-darwin-arm64@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-darwin-arm64@npm:14.2.15"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-darwin-x64@npm:15.0.3"
+"@next/swc-darwin-x64@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-darwin-x64@npm:14.2.15"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.0.3"
+"@next/swc-linux-arm64-gnu@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.15"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-linux-arm64-musl@npm:15.0.3"
+"@next/swc-linux-arm64-musl@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-linux-arm64-musl@npm:14.2.15"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-linux-x64-gnu@npm:15.0.3"
+"@next/swc-linux-x64-gnu@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.15"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-linux-x64-musl@npm:15.0.3"
+"@next/swc-linux-x64-musl@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-linux-x64-musl@npm:14.2.15"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.0.3"
+"@next/swc-win32-arm64-msvc@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.15"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:15.0.3":
-  version: 15.0.3
-  resolution: "@next/swc-win32-x64-msvc@npm:15.0.3"
+"@next/swc-win32-ia32-msvc@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.15"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:14.2.15":
+  version: 14.2.15
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.15"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2653,6 +2514,27 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 10c0/5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
+  languageName: node
+  linkType: hard
+
+"@rainbow-me/rainbowkit@npm:^2.1.3":
+  version: 2.2.0
+  resolution: "@rainbow-me/rainbowkit@npm:2.2.0"
+  dependencies:
+    "@vanilla-extract/css": "npm:1.15.5"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/sprinkles": "npm:1.6.3"
+    clsx: "npm:2.1.1"
+    qrcode: "npm:1.5.4"
+    react-remove-scroll: "npm:2.6.0"
+    ua-parser-js: "npm:^1.0.37"
+  peerDependencies:
+    "@tanstack/react-query": ">=5.0.0"
+    react: ">=18"
+    react-dom: ">=18"
+    viem: 2.x
+    wagmi: ^2.9.0
+  checksum: 10c0/4f2f9e83ae8ad9b1b98a54d7cca4178db252db299832a51f3baef5caa4000f73b0e042d02bd3dcd13981d97e08189e1da1bd3bf575c600fde1659c992686d4a5
   languageName: node
   linkType: hard
 
@@ -3384,19 +3266,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/counter@npm:0.1.3":
+"@swc/counter@npm:^0.1.3":
   version: 0.1.3
   resolution: "@swc/counter@npm:0.1.3"
   checksum: 10c0/8424f60f6bf8694cfd2a9bca45845bce29f26105cda8cf19cdb9fd3e78dc6338699e4db77a89ae449260bafa1cc6bec307e81e7fb96dbf7dcfce0eea55151356
   languageName: node
   linkType: hard
 
-"@swc/helpers@npm:0.5.13":
-  version: 0.5.13
-  resolution: "@swc/helpers@npm:0.5.13"
+"@swc/helpers@npm:0.5.5":
+  version: 0.5.5
+  resolution: "@swc/helpers@npm:0.5.5"
   dependencies:
+    "@swc/counter": "npm:^0.1.3"
     tslib: "npm:^2.4.0"
-  checksum: 10c0/b9df578401fc62405da9a6c31e79e447a2fd90f68b25b1daee12f2caf2821991bb89106f0397bc1acb4c4d84a8ce079d04b60b65f534496952e3bf8c9a52f40f
+  checksum: 10c0/21a9b9cfe7e00865f9c9f3eb4c1cc5b397143464f7abee76a2c5366e591e06b0155b5aac93fe8269ef8d548df253f6fd931e9ddfc0fd12efd405f90f45506e7d
   languageName: node
   linkType: hard
 
@@ -3407,14 +3290,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-query@npm:^5.60.2":
-  version: 5.60.2
-  resolution: "@tanstack/react-query@npm:5.60.2"
+"@tanstack/react-query@npm:^5, @tanstack/react-query@npm:^5.60.2":
+  version: 5.60.4
+  resolution: "@tanstack/react-query@npm:5.60.4"
   dependencies:
     "@tanstack/query-core": "npm:5.59.20"
   peerDependencies:
     react: ^18 || ^19
-  checksum: 10c0/be52cff84d3c38f2205816ef48f806d7a025d0daa6d92c08eedf4a0839782fbcf01ae2899ae2ae92f7b0c189254b1a8d6363791576950154d8dc7016bf81b4bf
+  checksum: 10c0/530e4ef3b06985f36f39a4195516c74bf7876283fa18658efbc6912e0b363d4be881377a9d793759ef9d44630331eb4fd00a409d0692d7726971b60287ca5fcd
   languageName: node
   linkType: hard
 
@@ -3805,6 +3688,51 @@ __metadata:
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
   checksum: 10c0/8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/css@npm:1.15.5":
+  version: 1.15.5
+  resolution: "@vanilla-extract/css@npm:1.15.5"
+  dependencies:
+    "@emotion/hash": "npm:^0.9.0"
+    "@vanilla-extract/private": "npm:^1.0.6"
+    css-what: "npm:^6.1.0"
+    cssesc: "npm:^3.0.0"
+    csstype: "npm:^3.0.7"
+    dedent: "npm:^1.5.3"
+    deep-object-diff: "npm:^1.1.9"
+    deepmerge: "npm:^4.2.2"
+    lru-cache: "npm:^10.4.3"
+    media-query-parser: "npm:^2.0.2"
+    modern-ahocorasick: "npm:^1.0.0"
+    picocolors: "npm:^1.0.0"
+  checksum: 10c0/85b8c710b5fbc7ac73494e97be152327ff52a81397ca424622df126cd664638127ba67ada9cddb9a80a57be3f732da382d538a346675e9c497d6b71d60c57555
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/dynamic@npm:2.1.2":
+  version: 2.1.2
+  resolution: "@vanilla-extract/dynamic@npm:2.1.2"
+  dependencies:
+    "@vanilla-extract/private": "npm:^1.0.6"
+  checksum: 10c0/7361863bbc1260fda447be80e888e3ad5dea09957651288d7aba81ba7f59594d11476a840c9162adc452f9a43dbc379b58621b5b500a49f537b0efc7737aac9c
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/private@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@vanilla-extract/private@npm:1.0.6"
+  checksum: 10c0/f1c4d9f32f509f664b2d073ea114ff0a83f154bd3cdae429cade64ad1ca0fdc1ba745f2811496cc6a6f8e5513a9a0fa3798ffc41e6ff8868aa7f06c825f615ef
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/sprinkles@npm:1.6.3":
+  version: 1.6.3
+  resolution: "@vanilla-extract/sprinkles@npm:1.6.3"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: 10c0/17e03af9d090aa175bdeae646ae4a5bf1da37b7e473caa4ab92efbbd7678e53137e10281a0669f50ab5bd985a59e621da2bfc3e0cc28bded32becd72b8cfaf13
   languageName: node
   linkType: hard
 
@@ -5301,6 +5229,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:2.1.1, clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
+  languageName: node
+  linkType: hard
+
 "clsx@npm:^1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
@@ -5562,6 +5497,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-what@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "css-what@npm:6.1.0"
+  checksum: 10c0/a09f5a6b14ba8dcf57ae9a59474722e80f20406c53a61e9aedb0eedc693b135113ffe2983f4efc4b5065ae639442e9ae88df24941ef159c218b231011d733746
+  languageName: node
+  linkType: hard
+
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -5571,7 +5513,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
+"csstype@npm:^3.0.2, csstype@npm:^3.0.7":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
@@ -5678,10 +5620,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dedent@npm:^1.5.3":
+  version: 1.5.3
+  resolution: "dedent@npm:1.5.3"
+  peerDependencies:
+    babel-plugin-macros: ^3.1.0
+  peerDependenciesMeta:
+    babel-plugin-macros:
+      optional: true
+  checksum: 10c0/d94bde6e6f780be4da4fd760288fcf755ec368872f4ac5218197200d86430aeb8d90a003a840bff1c20221188e3f23adced0119cb811c6873c70d0ac66d12832
+  languageName: node
+  linkType: hard
+
 "deep-is@npm:^0.1.3":
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: 10c0/7f0ee496e0dff14a573dc6127f14c95061b448b87b995fc96c017ce0a1e66af1675e73f1d6064407975bc4ea6ab679497a29fff7b5b9c4e99cb10797c1ad0b4c
+  languageName: node
+  linkType: hard
+
+"deep-object-diff@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "deep-object-diff@npm:1.1.9"
+  checksum: 10c0/12cfd1b000d16c9192fc649923c972f8aac2ddca4f71a292f8f2c1e2d5cf3c9c16c85e73ab3e7d8a89a5ec6918d6460677d0b05bd160f7bd50bb4816d496dc24
   languageName: node
   linkType: hard
 
@@ -5692,7 +5653,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.3.0":
+"deepmerge@npm:^4.2.2, deepmerge@npm:^4.3.0":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
@@ -5781,7 +5742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-libc@npm:^2.0.2, detect-libc@npm:^2.0.3":
+"detect-libc@npm:^2.0.2":
   version: 2.0.3
   resolution: "detect-libc@npm:2.0.3"
   checksum: 10c0/88095bda8f90220c95f162bf92cad70bd0e424913e655c20578600e35b91edc261af27531cf160a331e185c0ced93944bc7e09939143225f56312d7fd800fdb7
@@ -7001,6 +6962,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"get-nonce@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "get-nonce@npm:1.0.1"
+  checksum: 10c0/2d7df55279060bf0568549e1ffc9b84bc32a32b7541675ca092dce56317cdd1a59a98dcc4072c9f6a980779440139a3221d7486f52c488e69dc0fd27b1efb162
+  languageName: node
+  linkType: hard
+
 "get-port-please@npm:^3.1.2":
   version: 3.1.2
   resolution: "get-port-please@npm:3.1.2"
@@ -7125,7 +7093,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.11, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -7136,6 +7104,25 @@ __metadata:
   version: 1.4.0
   resolution: "graphemer@npm:1.4.0"
   checksum: 10c0/e951259d8cd2e0d196c72ec711add7115d42eb9a8146c8eeda5b8d3ac91e5dd816b9cd68920726d9fd4490368e7ed86e9c423f40db87e2d8dfafa00fa17c3a31
+  languageName: node
+  linkType: hard
+
+"graphql-request@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "graphql-request@npm:6.1.0"
+  dependencies:
+    "@graphql-typed-document-node/core": "npm:^3.2.0"
+    cross-fetch: "npm:^3.1.5"
+  peerDependencies:
+    graphql: 14 - 16
+  checksum: 10c0/f8167925a110e8e1de93d56c14245e7e64391dc8dce5002dd01bf24a3059f345d4ca1bb6ce2040e2ec78264211b0704e75da3e63984f0f74d2042f697a4e8cc6
+  languageName: node
+  linkType: hard
+
+"graphql@npm:^14 || ^15 || ^16":
+  version: 16.9.0
+  resolution: "graphql@npm:16.9.0"
+  checksum: 10c0/a8850f077ff767377237d1f8b1da2ec70aeb7623cdf1dfc9e1c7ae93accc0c8149c85abe68923be9871a2934b1bce5a2496f846d4d56e1cfb03eaaa7ddba9b6a
   languageName: node
   linkType: hard
 
@@ -8641,6 +8628,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"media-query-parser@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "media-query-parser@npm:2.0.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+  checksum: 10c0/91a987e9f6620f5c7d0fcf22bd0a106bbaccdef96aba62c461656ee656e141dd2b60f2f1d99411799183c2ea993bd177ca92c26c08bf321fbc0c846ab391d79c
+  languageName: node
+  linkType: hard
+
 "memoize-one@npm:^5.0.0":
   version: 5.2.1
   resolution: "memoize-one@npm:5.2.1"
@@ -9155,6 +9151,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"modern-ahocorasick@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "modern-ahocorasick@npm:1.0.1"
+  checksum: 10c0/90ef4516ba8eef136d0cd4949faacdadee02217b8e25deda2881054ca8fcc32b985ef159b6e794c40e11c51040303c8e2975b20b23b86ec8a2a63516bbf93add
+  languageName: node
+  linkType: hard
+
 "motion@npm:10.16.2":
   version: 10.16.2
   resolution: "motion@npm:10.16.2"
@@ -9252,32 +9255,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.0.3":
-  version: 15.0.3
-  resolution: "next@npm:15.0.3"
+"next@npm:14.2.15":
+  version: 14.2.15
+  resolution: "next@npm:14.2.15"
   dependencies:
-    "@next/env": "npm:15.0.3"
-    "@next/swc-darwin-arm64": "npm:15.0.3"
-    "@next/swc-darwin-x64": "npm:15.0.3"
-    "@next/swc-linux-arm64-gnu": "npm:15.0.3"
-    "@next/swc-linux-arm64-musl": "npm:15.0.3"
-    "@next/swc-linux-x64-gnu": "npm:15.0.3"
-    "@next/swc-linux-x64-musl": "npm:15.0.3"
-    "@next/swc-win32-arm64-msvc": "npm:15.0.3"
-    "@next/swc-win32-x64-msvc": "npm:15.0.3"
-    "@swc/counter": "npm:0.1.3"
-    "@swc/helpers": "npm:0.5.13"
+    "@next/env": "npm:14.2.15"
+    "@next/swc-darwin-arm64": "npm:14.2.15"
+    "@next/swc-darwin-x64": "npm:14.2.15"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.15"
+    "@next/swc-linux-arm64-musl": "npm:14.2.15"
+    "@next/swc-linux-x64-gnu": "npm:14.2.15"
+    "@next/swc-linux-x64-musl": "npm:14.2.15"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.15"
+    "@next/swc-win32-ia32-msvc": "npm:14.2.15"
+    "@next/swc-win32-x64-msvc": "npm:14.2.15"
+    "@swc/helpers": "npm:0.5.5"
     busboy: "npm:1.6.0"
     caniuse-lite: "npm:^1.0.30001579"
+    graceful-fs: "npm:^4.2.11"
     postcss: "npm:8.4.31"
-    sharp: "npm:^0.33.5"
-    styled-jsx: "npm:5.1.6"
+    styled-jsx: "npm:5.1.1"
   peerDependencies:
     "@opentelemetry/api": ^1.1.0
     "@playwright/test": ^1.41.2
-    babel-plugin-react-compiler: "*"
-    react: ^18.2.0 || 19.0.0-rc-66855b96-20241106
-    react-dom: ^18.2.0 || 19.0.0-rc-66855b96-20241106
+    react: ^18.2.0
+    react-dom: ^18.2.0
     sass: ^1.3.0
   dependenciesMeta:
     "@next/swc-darwin-arm64":
@@ -9294,22 +9296,20 @@ __metadata:
       optional: true
     "@next/swc-win32-arm64-msvc":
       optional: true
-    "@next/swc-win32-x64-msvc":
+    "@next/swc-win32-ia32-msvc":
       optional: true
-    sharp:
+    "@next/swc-win32-x64-msvc":
       optional: true
   peerDependenciesMeta:
     "@opentelemetry/api":
       optional: true
     "@playwright/test":
       optional: true
-    babel-plugin-react-compiler:
-      optional: true
     sass:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/c5f6a57acb5f29063abc82d4d4417a048d0c2d5216d6ded6aa3fe32d60bb4835ed57dd34e2ef8fdda15579e97205820dc25bf34556b1d942a01a33d9ae7f88db
+  checksum: 10c0/45d02c5a42f70cdbb8fba7a91f602d1852119f85cf5886d01d17e839ef096d42986ac17fe6356ed6e481548035e4eabff13b12818bf3ee38c11f488df579a8b0
   languageName: node
   linkType: hard
 
@@ -9901,7 +9901,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"permissionless@npm:^0.1.20":
+"permissionless@npm:^0.1.20, permissionless@npm:^0.1.29":
   version: 0.1.49
   resolution: "permissionless@npm:0.1.49"
   peerDependencies:
@@ -10319,6 +10319,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qrcode@npm:1.5.4":
+  version: 1.5.4
+  resolution: "qrcode@npm:1.5.4"
+  dependencies:
+    dijkstrajs: "npm:^1.0.1"
+    pngjs: "npm:^5.0.0"
+    yargs: "npm:^15.3.1"
+  bin:
+    qrcode: bin/qrcode
+  checksum: 10c0/ae1d57c9cff6099639a590b432c71b15e3bd3905ce4353e6d00c95dee6bb769a8f773f6a7575ecc1b8ed476bf79c5138a4a65cb380c682de3b926d7205d34d10
+  languageName: node
+  linkType: hard
+
 "query-string@npm:7.1.3":
   version: 7.1.3
   resolution: "query-string@npm:7.1.3"
@@ -10405,14 +10418,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.0.0-rc-66855b96-20241106":
-  version: 19.0.0-rc-66855b96-20241106
-  resolution: "react-dom@npm:19.0.0-rc-66855b96-20241106"
+"react-dom@npm:^18.2.0":
+  version: 18.3.1
+  resolution: "react-dom@npm:18.3.1"
   dependencies:
-    scheduler: "npm:0.25.0-rc-66855b96-20241106"
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.2"
   peerDependencies:
-    react: 19.0.0-rc-66855b96-20241106
-  checksum: 10c0/62298e0bd655f2bcbebccd03f593532a4728bebe119ecb30d7f50503d74882cbda90acacdb96bd54b6c1e29c36e74cc7ccab8132926d80e34002d89c07f6a9ab
+    react: ^18.3.1
+  checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
   languageName: node
   linkType: hard
 
@@ -10587,6 +10601,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-remove-scroll-bar@npm:^2.3.6":
+  version: 2.3.6
+  resolution: "react-remove-scroll-bar@npm:2.3.6"
+  dependencies:
+    react-style-singleton: "npm:^2.2.1"
+    tslib: "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/4e32ee04bf655a8bd3b4aacf6ffc596ae9eb1b9ba27eef83f7002632ee75371f61516ae62250634a9eae4b2c8fc6f6982d9b182de260f6c11841841e6e2e7515
+  languageName: node
+  linkType: hard
+
+"react-remove-scroll@npm:2.6.0":
+  version: 2.6.0
+  resolution: "react-remove-scroll@npm:2.6.0"
+  dependencies:
+    react-remove-scroll-bar: "npm:^2.3.6"
+    react-style-singleton: "npm:^2.2.1"
+    tslib: "npm:^2.1.0"
+    use-callback-ref: "npm:^1.3.0"
+    use-sidecar: "npm:^1.1.2"
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/c5881c537477d986e8d25d2588a9b6f7fe1254e05946fb4f4b55baeead502b0e1875fc3c42bb6f82736772cd96a50266e41d84e3c4cd25e9525bdfe2d838e96d
+  languageName: node
+  linkType: hard
+
 "react-shallow-renderer@npm:^16.15.0":
   version: 16.15.0
   resolution: "react-shallow-renderer@npm:16.15.0"
@@ -10599,10 +10648,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0-rc-66855b96-20241106":
-  version: 19.0.0-rc-66855b96-20241106
-  resolution: "react@npm:19.0.0-rc-66855b96-20241106"
-  checksum: 10c0/d4e33b16257c7fdadc79d73798bdbb4865a460875463a3bf3f06d764ce8795fa7964ee714dcbf3010838842af9ab124495a943305e77b2c8d31db08895d067a3
+"react-style-singleton@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "react-style-singleton@npm:2.2.1"
+  dependencies:
+    get-nonce: "npm:^1.0.0"
+    invariant: "npm:^2.2.4"
+    tslib: "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/6d66f3bdb65e1ec79089f80314da97c9a005087a04ee034255a5de129a4c0d9fd0bf99fa7bf642781ac2dc745ca687aae3de082bd8afdd0d117bc953241e15ad
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.2.0":
+  version: 18.3.1
+  resolution: "react@npm:18.3.1"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/283e8c5efcf37802c9d1ce767f302dd569dd97a70d9bb8c7be79a789b9902451e0d16334b05d73299b20f048cbc3c7d288bbbde10b701fa194e2089c237dbea3
   languageName: node
   linkType: hard
 
@@ -10980,10 +11048,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.25.0-rc-66855b96-20241106":
-  version: 0.25.0-rc-66855b96-20241106
-  resolution: "scheduler@npm:0.25.0-rc-66855b96-20241106"
-  checksum: 10c0/65f1187d4b472ad674b91d98661c54dfc312e0ba850713b57411a05db722b5a9cdc7a46683c776116668c251c90cd4d3973b9f021d3821762fa224f94275c85a
+"scheduler@npm:^0.23.2":
+  version: 0.23.2
+  resolution: "scheduler@npm:0.23.2"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10c0/26383305e249651d4c58e6705d5f8425f153211aef95f15161c151f7b8de885f24751b377e4a0b3dd42cce09aad3f87a61dab7636859c0d89b7daf1a1e2a5c78
   languageName: node
   linkType: hard
 
@@ -11198,75 +11268,6 @@ __metadata:
     "@img/sharp-win32-x64":
       optional: true
   checksum: 10c0/4727fcf5e3e680f2f837f897c9fcff765a43a60c802ccb7064ab939b06318695e0d5d900039adb104370c1e675743bba16a514632193cbee64eae522270adc48
-  languageName: node
-  linkType: hard
-
-"sharp@npm:^0.33.5":
-  version: 0.33.5
-  resolution: "sharp@npm:0.33.5"
-  dependencies:
-    "@img/sharp-darwin-arm64": "npm:0.33.5"
-    "@img/sharp-darwin-x64": "npm:0.33.5"
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.4"
-    "@img/sharp-libvips-linux-arm": "npm:1.0.5"
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.4"
-    "@img/sharp-libvips-linux-x64": "npm:1.0.4"
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.4"
-    "@img/sharp-linux-arm": "npm:0.33.5"
-    "@img/sharp-linux-arm64": "npm:0.33.5"
-    "@img/sharp-linux-s390x": "npm:0.33.5"
-    "@img/sharp-linux-x64": "npm:0.33.5"
-    "@img/sharp-linuxmusl-arm64": "npm:0.33.5"
-    "@img/sharp-linuxmusl-x64": "npm:0.33.5"
-    "@img/sharp-wasm32": "npm:0.33.5"
-    "@img/sharp-win32-ia32": "npm:0.33.5"
-    "@img/sharp-win32-x64": "npm:0.33.5"
-    color: "npm:^4.2.3"
-    detect-libc: "npm:^2.0.3"
-    semver: "npm:^7.6.3"
-  dependenciesMeta:
-    "@img/sharp-darwin-arm64":
-      optional: true
-    "@img/sharp-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-    "@img/sharp-linux-arm":
-      optional: true
-    "@img/sharp-linux-arm64":
-      optional: true
-    "@img/sharp-linux-s390x":
-      optional: true
-    "@img/sharp-linux-x64":
-      optional: true
-    "@img/sharp-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-linuxmusl-x64":
-      optional: true
-    "@img/sharp-wasm32":
-      optional: true
-    "@img/sharp-win32-ia32":
-      optional: true
-    "@img/sharp-win32-x64":
-      optional: true
-  checksum: 10c0/6b81421ddfe6ee524d8d77e325c5e147fef22884e1c7b1656dfd89a88d7025894115da02d5f984261bf2e6daa16f98cadd1721c4ba408b4212b1d2a60f233484
   languageName: node
   linkType: hard
 
@@ -11740,19 +11741,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-jsx@npm:5.1.6":
-  version: 5.1.6
-  resolution: "styled-jsx@npm:5.1.6"
+"styled-jsx@npm:5.1.1":
+  version: 5.1.1
+  resolution: "styled-jsx@npm:5.1.1"
   dependencies:
     client-only: "npm:0.0.1"
   peerDependencies:
-    react: ">= 16.8.0 || 17.x.x || ^18.0.0-0 || ^19.0.0-0"
+    react: ">= 16.8.0 || 17.x.x || ^18.0.0-0"
   peerDependenciesMeta:
     "@babel/core":
       optional: true
     babel-plugin-macros:
       optional: true
-  checksum: 10c0/ace50e7ea5ae5ae6a3b65a50994c51fca6ae7df9c7ecfd0104c36be0b4b3a9c5c1a2374d16e2a11e256d0b20be6d47256d768ecb4f91ab390f60752a075780f5
+  checksum: 10c0/42655cdadfa5388f8a48bb282d6b450df7d7b8cf066ac37038bd0499d3c9f084815ebd9ff9dfa12a218fd4441338851db79603498d7557207009c1cf4d609835
   languageName: node
   linkType: hard
 
@@ -11817,6 +11818,13 @@ __metadata:
   version: 0.1.0
   resolution: "system-architecture@npm:0.1.0"
   checksum: 10c0/1969974ea5d31a9ac7c38f2657cfe8255b36f9e1d5ba3c58cb84c24fbeedf562778b8511f18a0abe6d70ae90148cfcaf145ecf26e37c0a53a3829076f3238cbb
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^2.3.0":
+  version: 2.5.4
+  resolution: "tailwind-merge@npm:2.5.4"
+  checksum: 10c0/6c3d2a1d44344f373859f005e6366f0dbd7f66131d330a51dbe823dab08f71c388b2efcbb2b6a2170ca469581d27079c25cd40c234ca1356c4893ae99c2febb3
   languageName: node
   linkType: hard
 
@@ -12066,7 +12074,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
@@ -12192,6 +12200,15 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/7c9d2e07c81226d60435939618c91ec2ff0b75fbfa106eec3430f0fcf93a584bc6c73176676f532d78c3594fe28a54b36eb40b3d75593071a7ec91301533ace7
+  languageName: node
+  linkType: hard
+
+"ua-parser-js@npm:^1.0.37":
+  version: 1.0.39
+  resolution: "ua-parser-js@npm:1.0.39"
+  bin:
+    ua-parser-js: script/cli.js
+  checksum: 10c0/c6452b0c683000f10975cb0a7e74cb1119ea95d4522ae85f396fa53b0b17884358a24ffdd86a66030c6b2981bdc502109a618c79fdaa217ee9032c9e46fcc78a
   languageName: node
   linkType: hard
 
@@ -12565,7 +12582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"viem@npm:^2.1.1, viem@npm:^2.7.6":
+"viem@npm:^2.1.1, viem@npm:^2.17.4":
   version: 2.21.45
   resolution: "viem@npm:2.21.45"
   dependencies:
@@ -12601,7 +12618,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wagmi@npm:2.12.32":
+"wagmi@npm:^2.11.0":
   version: 2.12.32
   resolution: "wagmi@npm:2.12.32"
   dependencies:
@@ -12658,6 +12675,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:."
   dependencies:
+    "@coinbase/onchainkit": "npm:^0.35.5"
     "@dynamic-labs/ethereum": "npm:^3.6.2"
     "@dynamic-labs/ethereum-aa": "npm:^3.6.2"
     "@dynamic-labs/sdk-react-core": "npm:^3.6.2"
@@ -12670,15 +12688,15 @@ __metadata:
     "@zerodev/webauthn-key": "npm:5.3.3"
     eslint: "npm:^8"
     eslint-config-next: "npm:15.0.3"
-    next: "npm:15.0.3"
+    next: "npm:14.2.15"
     permissionless: "npm:0.1.20"
     postcss: "npm:^8"
-    react: "npm:19.0.0-rc-66855b96-20241106"
-    react-dom: "npm:19.0.0-rc-66855b96-20241106"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5"
-    viem: "npm:^2.7.6"
-    wagmi: "npm:2.12.32"
+    viem: "npm:^2.17.4"
+    wagmi: "npm:^2.11.0"
   languageName: unknown
   linkType: soft
 
