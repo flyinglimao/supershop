@@ -1,0 +1,37 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@dynamic-labs/ethereum": "^3.6.2",
+    "@dynamic-labs/ethereum-aa": "^3.6.2",
+    "@dynamic-labs/sdk-react-core": "^3.6.2",
+    "@dynamic-labs/wagmi-connector": "^3.6.2",
+    "@tanstack/react-query": "^5.60.2",
+    "@zerodev/sdk": "5.3.4",
+    "@zerodev/webauthn-key": "5.3.3",
+    "next": "15.0.3",
+    "permissionless": "0.1.20",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "viem": "^2.7.6",
+    "wagmi": "^2.12.32"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
+}
