@@ -5101,20 +5101,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xmtp/browser-sdk@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@xmtp/browser-sdk@npm:0.0.4"
-  dependencies:
-    "@xmtp/content-type-group-updated": "npm:^1.0.0"
-    "@xmtp/content-type-primitives": "npm:^1.0.1"
-    "@xmtp/content-type-text": "npm:^1.0.0"
-    "@xmtp/proto": "npm:^3.70.0"
-    "@xmtp/wasm-bindings": "npm:^0.0.4"
-    uuid: "npm:^10.0.0"
-  checksum: 10c0/5dc25cc2c0c795251b8e5dc8d129ac33009c22160bfe59b1cf3767b82965cbd543a35d4b86cd11efcd42d893e43d2c4e176c18844a4d1c4a5cf8396722e6236f
-  languageName: node
-  linkType: hard
-
 "@xmtp/consent-proof-signature@npm:^0.1.3":
   version: 0.1.3
   resolution: "@xmtp/consent-proof-signature@npm:0.1.3"
@@ -5253,7 +5239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xmtp/proto@npm:^3.61.1, @xmtp/proto@npm:^3.62.1, @xmtp/proto@npm:^3.68.0, @xmtp/proto@npm:^3.70.0, @xmtp/proto@npm:^3.71.0":
+"@xmtp/proto@npm:^3.61.1, @xmtp/proto@npm:^3.62.1, @xmtp/proto@npm:^3.68.0, @xmtp/proto@npm:^3.71.0":
   version: 3.72.0
   resolution: "@xmtp/proto@npm:3.72.0"
   dependencies:
@@ -5269,13 +5255,6 @@ __metadata:
   version: 0.3.6
   resolution: "@xmtp/user-preferences-bindings-wasm@npm:0.3.6"
   checksum: 10c0/8a28468e3c82c85157dd7962485fec2712f448aa510fb46c51ea0e01139b0e316aa52ecbbc4a84604b254aa848e045dd378b1c116465c7739926a9a0bb4425f6
-  languageName: node
-  linkType: hard
-
-"@xmtp/wasm-bindings@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@xmtp/wasm-bindings@npm:0.0.4"
-  checksum: 10c0/0278a052e9ed6656adf34a23cdf388299d9aefe4536fb55d153024bb031f34ad0c979a59c867e63deb574ce337e68ba430bc68c7ce32a04544f0aac786943680
   languageName: node
   linkType: hard
 
@@ -14326,15 +14305,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "uuid@npm:10.0.0"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10c0/eab18c27fe4ab9fb9709a5d5f40119b45f2ec8314f8d4cf12ce27e4c6f4ffa4a6321dc7db6c515068fa373c075b49691ba969f0010bf37f44c37ca40cd6bf7fe
-  languageName: node
-  linkType: hard
-
 "uuid@npm:^8.3.2":
   version: 8.3.2
   resolution: "uuid@npm:8.3.2"
@@ -14617,8 +14587,8 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
-    "@xmtp/browser-sdk": "npm:^0.0.4"
     "@xmtp/message-kit": "npm:1.1.8-beta.3"
+    "@xmtp/xmtp-js": "npm:^13.0.3"
     "@zerodev/sdk": "npm:5.3.4"
     "@zerodev/webauthn-key": "npm:5.3.3"
     eslint: "npm:^8"

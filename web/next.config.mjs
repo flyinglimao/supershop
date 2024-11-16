@@ -28,7 +28,7 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    serverComponentsExternalPackages: ["@xmtp/wasm-bindings"],
+    serverComponentsExternalPackages: ["@xmtp/user-preferences-bindings-wasm"],
   },
 };
 
