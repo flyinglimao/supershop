@@ -77,8 +77,6 @@ store verified:
 https://sepolia.basescan.org/address/0x63706656297A7A94fE052819477BADa37c719F39#code
 
 
-
-
 networks: polygonAmoy
 StoreEvent: 0x4fc6E2d500FCA4d55ca971927A1301A5648E95E9
 Store: 0xc201Ab5F4e6509312A4B7BEAe19acE56091B86B4
@@ -89,3 +87,28 @@ https://amoy.polygonscan.com/address/0x4fc6E2d500FCA4d55ca971927A1301A5648E95E9#
 
 store verified:
 https://amoy.polygonscan.com/address/0xc201Ab5F4e6509312A4B7BEAe19acE56091B86B4#code
+
+///////// deploy only /////////
+
+networks: gnosis chiado
+StoreModule#StoreEvent - 0x15A580c90B10bF98dFe66f28B8e96D08150Cb6a4
+StoreModule#Store - 0x86440CdFAB1e6A8E32A8A7b4418E3EA6B89E887E
+
+networks: morphTestnet
+StoreModule#StoreEvent - 0x0Ef09E113f8a412BaEfa4B2d9a597EeAE1EA84d3
+StoreModule#Store - 0x55D30Ba332AdA10478e5aBbcA3400253bD5281E4
+
+networks: lineaTestnet
+StoreModule#StoreEvent - 0x0Ef09E113f8a412BaEfa4B2d9a597EeAE1EA84d3
+StoreModule#Store - 0x55D30Ba332AdA10478e5aBbcA3400253bD5281E4
+
+networks: mantleSepolia
+StoreModule#StoreEvent - 0x0Ef09E113f8a412BaEfa4B2d9a597EeAE1EA84d3
+StoreModule#Store - 0x55D30Ba332AdA10478e5aBbcA3400253bD5281E4
+
+
+networks:
+networks:
+networks:
+networks:
+networks:
