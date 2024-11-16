@@ -5265,6 +5265,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xmtp/react-sdk@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@xmtp/react-sdk@npm:9.0.0"
+  dependencies:
+    "@xmtp/content-type-primitives": "npm:^1.0.1"
+    "@xmtp/content-type-text": "npm:^1.0.0"
+    async-mutex: "npm:^0.5.0"
+    date-fns: "npm:^3.6.0"
+    dexie: "npm:^4.0.8"
+    dexie-react-hooks: "npm:^1.1.7"
+    uuid: "npm:^10.0.0"
+    zod: "npm:^3.23.8"
+  peerDependencies:
+    "@xmtp/content-type-primitives": ^1.0.1
+    "@xmtp/content-type-reaction": ^1.1.7
+    "@xmtp/content-type-remote-attachment": ^1.1.8
+    "@xmtp/content-type-reply": ^1.1.9
+    "@xmtp/xmtp-js": ^12.1.0
+    react: ^16.14.0 || ^17 || ^18
+  checksum: 10c0/adaa6b8b576251b7da474ca013ab032ad88febba5518cdf561ed507e061a61a35db79460b40793a98dff17a0322a175490941495ee1e728126dbdb83cabe6d02
+  languageName: node
+  linkType: hard
+
 "@xmtp/user-preferences-bindings-wasm@npm:^0.3.6":
   version: 0.3.6
   resolution: "@xmtp/user-preferences-bindings-wasm@npm:0.3.6"
@@ -6696,6 +6719,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "date-fns@npm:3.6.0"
+  checksum: 10c0/0b5fb981590ef2f8e5a3ba6cd6d77faece0ea7f7158948f2eaae7bbb7c80a8f63ae30b01236c2923cf89bb3719c33aeb150c715ea4fe4e86e37dcf06bed42fb6
+  languageName: node
+  linkType: hard
+
 "dayjs@npm:^1.8.15":
   version: 1.11.13
   resolution: "dayjs@npm:1.11.13"
@@ -6894,6 +6924,24 @@ __metadata:
   version: 1.1.0
   resolution: "detect-node-es@npm:1.1.0"
   checksum: 10c0/e562f00de23f10c27d7119e1af0e7388407eb4b06596a25f6d79a360094a109ff285de317f02b090faae093d314cf6e73ac3214f8a5bb3a0def5bece94557fbe
+  languageName: node
+  linkType: hard
+
+"dexie-react-hooks@npm:^1.1.7":
+  version: 1.1.7
+  resolution: "dexie-react-hooks@npm:1.1.7"
+  peerDependencies:
+    "@types/react": ">=16"
+    dexie: ^3.2 || ^4.0.1-alpha
+    react: ">=16"
+  checksum: 10c0/3ff38e715a52bff9132b483963246ea5372a282d9257c8c2bf8891c522fa0d761d1e362bb352eb63386f49ea9a55c52e1bcc5cce2019deb1eceba40d8a88631d
+  languageName: node
+  linkType: hard
+
+"dexie@npm:^4.0.8":
+  version: 4.0.10
+  resolution: "dexie@npm:4.0.10"
+  checksum: 10c0/7e5cbc79947fd830918679f8621bceb4e543f139eb8ec73d5a9605927e5d659ea306a9649bbac7c37d55e623888daaf416f9868422badebc26049c9c2ebf1dfb
   languageName: node
   linkType: hard
 
@@ -14619,6 +14667,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@xmtp/browser-sdk": "npm:^0.0.4"
     "@xmtp/message-kit": "npm:1.1.8-beta.3"
+    "@xmtp/react-sdk": "npm:^9.0.0"
     "@xmtp/xmtp-js": "npm:^13.0.3"
     "@zerodev/sdk": "npm:5.3.4"
     "@zerodev/webauthn-key": "npm:5.3.3"
@@ -15040,6 +15089,13 @@ __metadata:
   version: 3.22.4
   resolution: "zod@npm:3.22.4"
   checksum: 10c0/7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
   languageName: node
   linkType: hard
 

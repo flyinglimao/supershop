@@ -7,16 +7,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ZeroDevSmartWalletConnectors } from "@dynamic-labs/ethereum-aa";
 import { ReactNode } from "react";
 import { http } from "viem";
-import { baseSepolia } from "wagmi/chains";
+import { baseSepolia, polygonAmoy } from "wagmi/chains";
 import { WagmiProvider, createConfig } from "wagmi";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
 import { KernelProvider } from "./_smartWallet";
 
 const config = createConfig({
-  chains: [baseSepolia],
+  chains: [baseSepolia, polygonAmoy],
   multiInjectedProviderDiscovery: false,
   transports: {
     [baseSepolia.id]: http(),
+    [polygonAmoy.id]: http(),
   },
 });
 

@@ -2,6 +2,7 @@
 
 import prisma from "@/prisma";
 import { Address } from "viem";
+import { generatePrivateKey } from "viem/accounts";
 
 export async function register(
   address: Address,
@@ -9,6 +10,7 @@ export async function register(
   weight: number,
   gender: string
 ) {
+  const chatKey = generatePrivateKey();
   await prisma.user.upsert({
     where: {
       address,
@@ -18,6 +20,7 @@ export async function register(
       height,
       weight,
       gender,
+      chatKey,
     },
     update: {
       height,

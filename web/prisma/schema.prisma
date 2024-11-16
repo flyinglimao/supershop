@@ -18,6 +18,7 @@ model User {
   gender            String
   height            Float
   weight            Float
+  chatKey           String?
   connectedMerchant ConnectedMerchant[]
 }
 

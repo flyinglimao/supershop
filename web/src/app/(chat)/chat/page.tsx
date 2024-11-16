@@ -12,13 +12,14 @@ import mic from "@/app/_assets/mic.png";
 import send from "@/app/_assets/send.png";
 import upload from "@/app/_assets/upload.png";
 import { StartChat } from "./StartChat";
+import { useChat, XmtpProvider } from "@/app/_xmtp/Xmtp";
+import { Message } from "./Message";
 
 export default function Chat() {
   const router = useRouter();
   const kernel = useKernelClient();
-  const [user, setUser] = useState<Awaited<ReturnType<typeof getUser>>>();
   const [input, setInput] = useState("");
-  const [chats, setChats] = useState<never[]>([]);
+  const { messages, sendMessage } = useChat();
 
   useEffect(() => {
     if (!kernel?.account) return;
@@ -32,7 +33,6 @@ export default function Chat() {
       if (!user) {
         return router.push("/register");
       }
-      setUser(user);
     }
 
     fetchUser();
@@ -63,8 +63,14 @@ export default function Chat() {
           />
         </button>
       </header>
-      <div className="flex-1">
-        {chats.length === 0 ? <StartChat send={() => {}} /> : null}
+      <div className="flex-1 mb-4">
+        {messages.length === 0 ? (
+          <StartChat send={sendMessage} />
+        ) : (
+          messages.map((message) => (
+            <Message key={message.id} message={message} />
+          ))
+        )}
       </div>
       <footer className="sticky bottom-0 text-white px-6 pb-6 flex flex-col gap-4 pointer-events-none">
         <button
@@ -78,26 +84,34 @@ export default function Chat() {
             alt="speech to text"
           />
         </button>
-        <div className="flex gap-3 pointer-events-auto">
-          <input
-            type="text"
-            placeholder="Ask me anything..."
-            className="rounded-full border border-neutral-3 placeholder-shown:border-neutral-2 placeholder:text-neutral-3 text-white focus:text-white px-4 py-1 w-full bg-neutral-1"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button
-            type="button"
-            className="bg-primary rounded-full grid place-items-center size-14 flex-shrink-0"
-          >
-            <Image
-              src={send.src}
-              width={send.width}
-              height={send.height}
-              alt="send"
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            sendMessage(input);
+            setInput("");
+          }}
+        >
+          <div className="flex gap-3 pointer-events-auto">
+            <input
+              type="text"
+              placeholder="Ask me anything..."
+              className="rounded-full border border-neutral-3 placeholder-shown:border-neutral-2 placeholder:text-neutral-3 text-white focus:text-white px-4 py-1 w-full bg-neutral-1"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
             />
-          </button>
-        </div>
+            <button
+              type="submit"
+              className="bg-primary rounded-full grid place-items-center size-14 flex-shrink-0"
+            >
+              <Image
+                src={send.src}
+                width={send.width}
+                height={send.height}
+                alt="send"
+              />
+            </button>
+          </div>
+        </form>
       </footer>
     </div>
   );
