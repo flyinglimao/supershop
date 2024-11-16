@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased bg-neutral-1 max-w-3xl mx-auto`}>
+      <body className={`antialiased bg-neutral-1 max-w-xl mx-auto`}>
         <Provider>{children}</Provider>
       </body>
     </html>

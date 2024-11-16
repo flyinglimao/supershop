@@ -11,6 +11,7 @@ export default {
       colors: {
         neutral: {
           1: "#0A0A0A",
+          2: "#7A808C52",
           3: "#7A808C",
         },
         primary: "#DF9ECD",

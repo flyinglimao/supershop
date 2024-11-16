@@ -1,10 +1,20 @@
 "use server";
 
+import prisma from "@/prisma";
 import { Address } from "viem";
 
-async function register(
+export async function register(
   address: Address,
-  width: number,
   height: number,
+  weight: number,
   gender: string
-) {}
+) {
+  await prisma.user.create({
+    data: {
+      address,
+      height,
+      weight,
+      gender,
+    },
+  });
+}
