@@ -8,7 +8,12 @@ import {
   stringToBytes,
   stringToHex,
 } from "viem";
-import { execute, Item, SearchItemDocument } from "~/.graphclient";
+import {
+  execute,
+  GetItemDocument,
+  Item,
+  SearchItemDocument,
+} from "~/.graphclient";
 
 async function handler(context: HandlerContext) {
   const {
@@ -40,6 +45,25 @@ async function handler(context: HandlerContext) {
         );
       }
       return;
+
+    case "buy": {
+      const id = params.id;
+      const result = await execute(GetItemDocument, { id });
+      console.log(result, id);
+      if (!result.data.item) {
+        context.reply("I can't find the item.");
+        return;
+      }
+
+      context.reply(
+        JSON.stringify({
+          type: "Order",
+          ...result.data.item,
+          ...solveMetadata(result.data.item.metadata),
+        })
+      );
+      return;
+    }
   }
 }
 
@@ -98,7 +122,6 @@ export const skills: SkillGroup[] = [
         params: {
           id: {
             default: "",
-            plural: true,
             type: "string",
           },
         },
@@ -111,7 +134,6 @@ export const skills: SkillGroup[] = [
         params: {
           id: {
             default: "",
-            plural: true,
             type: "string",
           },
         },

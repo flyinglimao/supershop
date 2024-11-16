@@ -1,8 +1,16 @@
 sources:
-  - name: celo
+  # - name: celo
+  #   handler:
+  #     graphql:
+  #       endpoint: https://api.studio.thegraph.com/query/94899/supershop-v1/version/latest
+  # - name: polygon
+  #   handler:
+  #     graphql:
+  #       endpoint: https://api.studio.thegraph.com/query/94899/supershop-polygon-amoy/version/latest
+  - name: base
     handler:
       graphql:
-        endpoint: https://api.studio.thegraph.com/query/94899/supershop-v1/version/latest
+        endpoint: https://api.studio.thegraph.com/query/94899/supershop-base-sepolia/version/latest
 
 documents:
   - ./src/agent/*.graphql

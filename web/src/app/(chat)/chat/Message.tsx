@@ -1,11 +1,20 @@
 "use client";
 
 import { type CachedMessage } from "@xmtp/react-sdk";
-import { formatEther, isAddressEqual } from "viem";
+import {
+  encodeFunctionData,
+  erc20Abi,
+  formatEther,
+  formatUnits,
+  isAddressEqual,
+  parseEther,
+  parseUnits,
+} from "viem";
 import Image from "next/image";
 
 import avatar from "@/app/_assets/avatar.png";
 import botAvatar from "@/app/_assets/bot-avatar.png";
+import { useKernelClient } from "@/app/_smartWallet";
 
 export function Message({ message }: { message: CachedMessage }) {
   const isUser = !isAddressEqual(
@@ -42,13 +51,15 @@ function AgentMessage({ content }: { content: { content: string } | string }) {
   if (typeof content === "string") {
     return <TextMessage content={content} isBot />;
   }
-
   const type = getMessageType(content.content);
   if (type === "text") {
     return <TextMessage content={content.content} isBot />;
   }
   if (type === "ItemList") {
     return <ItemCardList items={JSON.parse(content.content)["items"]} />;
+  }
+  if (type === "Order") {
+    return <BuyItem item={JSON.parse(content.content)} />;
   }
   return null;
 }
@@ -99,7 +110,35 @@ function Item({
       />
       <div className="flex flex-col py-1 px-2">
         <p>{item["name"] || "Product"}</p>
+        <p>${formatUnits(BigInt(item["price"] || 0), 6) || "0"}</p>
+      </div>
+    </div>
+  );
+}
+
+function BuyItem({
+  item,
+}: {
+  item: { id: string; name?: string; price?: string };
+}) {
+  const kernelClient = useKernelClient();
+
+  return (
+    <div className="rounded-3xl bg-white w-80 flex-shrink-0 overflow-hidden pb-2">
+      <Image
+        src={
+          imageMap[item["name"] as keyof typeof imageMap] || "/base-pant.png"
+        }
+        width={320}
+        height={320}
+        alt="item"
+      />
+      <div className="flex flex-col py-1 px-2">
+        <p>{item["name"] || "Product"}</p>
         <p>${formatEther(BigInt(item["price"] || 0)) || "0"}</p>
+        <button className="bg-primary text-white rounded-lg py-1 px-2">
+          Buy
+        </button>
       </div>
     </div>
   );

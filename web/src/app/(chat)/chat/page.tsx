@@ -13,12 +13,26 @@ import upload from "@/app/_assets/upload.png";
 import { useChat } from "@/app/_xmtp/Xmtp";
 import { Message } from "./Message";
 import { StartChat } from "./StartChat";
+import { useReadContract } from "wagmi";
+import {
+  erc20Abi,
+  formatEther,
+  formatUnits,
+  parseEther,
+  zeroAddress,
+} from "viem";
 
 export default function Chat() {
   const router = useRouter();
   const kernel = useKernelClient();
   const [input, setInput] = useState("");
   const { messages, sendMessage } = useChat();
+  const { data: balance } = useReadContract({
+    abi: erc20Abi,
+    address: process.env.NEXT_PUBLIC_TOKEN_ADDRESS,
+    functionName: "balanceOf",
+    args: [kernel?.account?.address || zeroAddress],
+  });
 
   useEffect(() => {
     if (!kernel?.account) return;
@@ -51,7 +65,12 @@ export default function Chat() {
         <Image src={logo.src} width={48} height={48} alt="logo" />
         <div className="flex-1 flex-col gap-1">
           <p className="text-white text-xl font-semibold">SuperShopper</p>
-          <p className="text-[#DF9EDB] text-sm font-semibold">Balance: $100</p>
+          <p className="text-[#DF9EDB] text-sm font-semibold">
+            Balance: $
+            {Intl.NumberFormat("en-US", { maximumFractionDigits: 2 }).format(
+              parseFloat(formatUnits(balance || 0n, 6))
+            )}
+          </p>
         </div>
         <button role="button p-2">
           <Image

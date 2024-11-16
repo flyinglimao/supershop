@@ -21,8 +21,8 @@ import { getMesh, ExecuteMeshFn, SubscribeMeshFn, MeshContext as BaseMeshContext
 import { MeshStore, FsStoreStorageAdapter } from '@graphql-mesh/store';
 import { path as pathModule } from '@graphql-mesh/cross-helpers';
 import { ImportFn } from '@graphql-mesh/types';
-import type { CeloTypes } from './sources/celo/types';
-import * as importedModule$0 from "./sources/celo/introspectionSchema";
+import type { BaseTypes } from './sources/base/types';
+import * as importedModule$0 from "./sources/base/introspectionSchema";
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -1235,7 +1235,7 @@ export type DirectiveResolvers<ContextType = MeshContext> = ResolversObject<{
   derivedFrom?: derivedFromDirectiveResolver<any, any, ContextType>;
 }>;
 
-export type MeshContext = CeloTypes.Context & BaseMeshContext;
+export type MeshContext = BaseTypes.Context & BaseMeshContext;
 
 
 import { fileURLToPath } from '@graphql-mesh/utils';
@@ -1244,7 +1244,7 @@ const baseDir = pathModule.join(pathModule.dirname(fileURLToPath(import.meta.url
 const importFn: ImportFn = <T>(moduleId: string) => {
   const relativeModuleId = (pathModule.isAbsolute(moduleId) ? pathModule.relative(baseDir, moduleId) : moduleId).split('\\').join('/').replace(baseDir + '/', '');
   switch(relativeModuleId) {
-    case ".graphclient/sources/celo/introspectionSchema":
+    case ".graphclient/sources/base/introspectionSchema":
       return Promise.resolve(importedModule$0) as T;
     
     default:
@@ -1277,22 +1277,22 @@ const cache = new (MeshCache as any)({
 const sources: MeshResolvedSource[] = [];
 const transforms: MeshTransform[] = [];
 const additionalEnvelopPlugins: MeshPlugin<any>[] = [];
-const celoTransforms = [];
+const baseTransforms = [];
 const additionalTypeDefs = [] as any[];
-const celoHandler = new GraphqlHandler({
-              name: "celo",
-              config: {"endpoint":"https://api.studio.thegraph.com/query/94899/supershop-v1/version/latest"},
+const baseHandler = new GraphqlHandler({
+              name: "base",
+              config: {"endpoint":"https://api.studio.thegraph.com/query/94899/supershop-base-sepolia/version/latest"},
               baseDir,
               cache,
               pubsub,
-              store: sourcesStore.child("celo"),
-              logger: logger.child("celo"),
+              store: sourcesStore.child("base"),
+              logger: logger.child("base"),
               importFn,
             });
 sources[0] = {
-          name: 'celo',
-          handler: celoHandler,
-          transforms: celoTransforms
+          name: 'base',
+          handler: baseHandler,
+          transforms: baseTransforms
         }
 const additionalResolvers = [] as any[]
 const merger = new(BareMerger as any)({
@@ -1302,7 +1302,8 @@ const merger = new(BareMerger as any)({
         store: rootStore.child('bareMerger')
       })
 const documentHashMap = {
-        "7d60b229073413013d7557cffc790080909d4552aea21057e236d0c8a68a63c0": SearchItemDocument
+        "a63665e500ed811f715ae0ab4fe277c9f0c4f0dfd5381527d41728058d7124ca": SearchItemDocument,
+"a63665e500ed811f715ae0ab4fe277c9f0c4f0dfd5381527d41728058d7124ca": GetItemDocument
       }
 additionalEnvelopPlugins.push(usePersistedOperations({
         getPersistedOperation(key) {
@@ -1329,7 +1330,14 @@ additionalEnvelopPlugins.push(usePersistedOperations({
           return printWithCache(SearchItemDocument);
         },
         location: 'SearchItemDocument.graphql',
-        sha256Hash: '7d60b229073413013d7557cffc790080909d4552aea21057e236d0c8a68a63c0'
+        sha256Hash: 'a63665e500ed811f715ae0ab4fe277c9f0c4f0dfd5381527d41728058d7124ca'
+      },{
+        document: GetItemDocument,
+        get rawSDL() {
+          return printWithCache(GetItemDocument);
+        },
+        location: 'GetItemDocument.graphql',
+        sha256Hash: 'a63665e500ed811f715ae0ab4fe277c9f0c4f0dfd5381527d41728058d7124ca'
       }
     ];
     },
@@ -1391,6 +1399,13 @@ export type SearchItemQueryVariables = Exact<{
 
 export type SearchItemQuery = { items: Array<Pick<Item, 'id' | 'itemName' | 'itemDescription' | 'price' | 'metadata'>> };
 
+export type GetItemQueryVariables = Exact<{
+  id: Scalars['ID']['input'];
+}>;
+
+
+export type GetItemQuery = { item?: Maybe<Pick<Item, 'id' | 'itemName' | 'itemDescription' | 'price' | 'metadata'>> };
+
 
 export const SearchItemDocument = gql`
     query SearchItem($query: [Item_filter]) {
@@ -1403,6 +1418,18 @@ export const SearchItemDocument = gql`
   }
 }
     ` as unknown as DocumentNode<SearchItemQuery, SearchItemQueryVariables>;
+export const GetItemDocument = gql`
+    query GetItem($id: ID!) {
+  item(id: $id) {
+    id
+    itemName
+    itemDescription
+    price
+    metadata
+  }
+}
+    ` as unknown as DocumentNode<GetItemQuery, GetItemQueryVariables>;
+
 
 
 export type Requester<C = {}, E = unknown> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R> | AsyncIterable<R>
@@ -1410,6 +1437,9 @@ export function getSdk<C, E>(requester: Requester<C, E>) {
   return {
     SearchItem(variables?: SearchItemQueryVariables, options?: C): Promise<SearchItemQuery> {
       return requester<SearchItemQuery, SearchItemQueryVariables>(SearchItemDocument, variables, options) as Promise<SearchItemQuery>;
+    },
+    GetItem(variables: GetItemQueryVariables, options?: C): Promise<GetItemQuery> {
+      return requester<GetItemQuery, GetItemQueryVariables>(GetItemDocument, variables, options) as Promise<GetItemQuery>;
     }
   };
 }

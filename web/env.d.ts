@@ -7,6 +7,7 @@ declare module "process" {
         NEXT_PUBLIC_CDP_PROJECT_ID: string;
         KEY: `0x${string}`;
         NEXT_PUBLIC_AGENT_ADDRESS: `0x${string}`;
+        NEXT_PUBLIC_TOKEN_ADDRESS: `0x${string}`;
       }
     }
   }

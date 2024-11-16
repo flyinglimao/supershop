@@ -7,3 +7,13 @@ query SearchItem($query: [Item_filter]) {
     metadata
   }
 }
+
+query GetItem($id: ID!) {
+  item(id: $id) {
+    id
+    itemName
+    itemDescription
+    price
+    metadata
+  }
+}
