@@ -10,6 +10,7 @@ import { http } from "viem";
 import { baseSepolia } from "wagmi/chains";
 import { WagmiProvider, createConfig } from "wagmi";
 import { OnchainKitProvider } from "@coinbase/onchainkit";
+import { KernelProvider } from "./_smartWallet";
 
 const config = createConfig({
   chains: [baseSepolia],
@@ -39,7 +40,9 @@ export function Provider({ children }: { children: ReactNode }) {
             projectId={process.env.NEXT_PUBLIC_CDP_PROJECT_ID}
             chain={baseSepolia}
           >
-            <DynamicWagmiConnector>{children}</DynamicWagmiConnector>
+            <DynamicWagmiConnector>
+              <KernelProvider>{children}</KernelProvider>
+            </DynamicWagmiConnector>
           </OnchainKitProvider>
         </QueryClientProvider>
       </WagmiProvider>
