@@ -20,6 +20,7 @@ dataSources:
         - RegisterStoreEvent
         - ReleaseItemEvent
         - RemoveItemEvent
+        - Item
       abis:
         - name: StoreEvent
           file: ./abis/StoreEvent.json
