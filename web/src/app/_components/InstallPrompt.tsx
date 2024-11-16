@@ -31,7 +31,7 @@ export function InstallPrompt() {
   return (
     <div>
       <h3>Install App</h3>
-      <button onClick={() => deferredPrompt?.prompt?.()}>
+      <button onClick={() => deferredPrompt?.prompt?.()} type="button">
         Add to Home Screen
       </button>
       {isIOS && (

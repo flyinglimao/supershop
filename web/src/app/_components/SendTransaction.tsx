@@ -9,6 +9,7 @@ export function SendTransaction() {
 
   return (
     <button
+      type="button"
       onClick={async () => {
         const tx = await kernelClient.sendTransactions({
           transactions: [

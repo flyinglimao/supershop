@@ -19,7 +19,7 @@ export default function Register() {
       Number(weight),
       "male"
     ).then(() => {
-      router.push("/chat");
+      router.push("/onramp");
     });
   }
 
@@ -50,6 +50,7 @@ export default function Register() {
         className="mt-12 text-black rounded-full bg-primary p-4 w-full font-semibold disabled:opacity-50"
         disabled={isNaN(Number(height || "x")) || isNaN(Number(weight || "x"))}
         onClick={() => onRegister()}
+        type="button"
       >
         Done
       </button>
