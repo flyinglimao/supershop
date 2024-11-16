@@ -1,15 +1,15 @@
 import { ethers } from "hardhat";
 import {
-  base_sepolia_storeAddress,
-  base_sepolia_storeEventAddress,
+  polygon_amoy_storeAddress,
+  polygon_amoy_storeEventAddress,
 } from "../const";
 
 async function main() {
   const storeEvent = await ethers.getContractAt(
     "StoreEvent",
-    base_sepolia_storeEventAddress
+    polygon_amoy_storeEventAddress
   );
-  const tx = await storeEvent.registerStore(base_sepolia_storeAddress);
+  const tx = await storeEvent.registerStore(polygon_amoy_storeAddress);
   await tx.wait();
 
   console.log("Store registered");

@@ -1,9 +1,9 @@
 import { ethers } from "hardhat";
 import { Store } from "../typechain-types/contracts/Store";
-import { storeAddress } from "../const";
+import { polygon_amoy_storeAddress } from "../const";
 
 async function main() {
-  const store = await ethers.getContractAt("Store", storeAddress);
+  const store = await ethers.getContractAt("Store", polygon_amoy_storeAddress);
 
   const mockItem: Store.ItemInfoStruct = {
     itemId: 1,
@@ -18,20 +18,16 @@ async function main() {
     metadata: "0x",
   };
 
-  const releaseItemTx = await store.removeItems(8);
+  const releaseItemTx = await store.removeItems(1);
   await releaseItemTx.wait();
-  const releaseItemTx2 = await store.removeItems(9);
+  const releaseItemTx2 = await store.removeItems(2);
   await releaseItemTx2.wait();
-  const releaseItemTx3 = await store.removeItems(10);
+  const releaseItemTx3 = await store.removeItems(3);
   await releaseItemTx3.wait();
-  const releaseItemTx4 = await store.removeItems(11);
+  const releaseItemTx4 = await store.removeItems(4);
   await releaseItemTx4.wait();
-  const releaseItemTx5 = await store.removeItems(12);
+  const releaseItemTx5 = await store.removeItems(5);
   await releaseItemTx5.wait();
-  const releaseItemTx6 = await store.removeItems(13);
-  await releaseItemTx6.wait();
-  const releaseItemTx7 = await store.removeItems(14);
-  await releaseItemTx7.wait();
 
   console.log("Item removed");
 }
