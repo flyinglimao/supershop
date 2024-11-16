@@ -36,7 +36,12 @@ export default function Register() {
           Deposit an enough USD for AI Agent
         </p>
         <button role="button p-2">
-          <Image {...dropdown} alt="menu" />
+          <Image
+            src={dropdown.src}
+            width={dropdown.width}
+            height={dropdown.height}
+            alt="menu"
+          />
         </button>
       </header>
       <div className="pt-16 pb-72 flex flex-col items-center gap-3">
@@ -50,7 +55,12 @@ export default function Register() {
           className="bg-gradient-to-r to-[#FFC47F] from-[#DF9ECD] text-black rounded-full px-4 py-2 font-semibold flex items-center gap-1"
           onClick={() => router.push("/register")}
         >
-          <Image {...diamond} alt="" />
+          <Image
+            src={diamond.src}
+            width={diamond.width}
+            height={diamond.height}
+            alt=""
+          />
           Onboarding
         </button>
       </div>
