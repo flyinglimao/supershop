@@ -65,7 +65,6 @@ https://celo-alfajores.blockscout.com/address/0x55D30Ba332AdA10478e5aBbcA3400253
 store verified:
 https://celo-alfajores.blockscout.com/address/0x15A580c90B10bF98dFe66f28B8e96D08150Cb6a4#code
 
-
 networks: base sepolia
 StoreEvent: 0x1Fe7556e700ED09C0dDb5d9482b7D0c5E477a10c
 Store: 0x63706656297A7A94fE052819477BADa37c719F39
