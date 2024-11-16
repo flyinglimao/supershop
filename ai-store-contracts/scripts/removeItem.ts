@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 import { Store } from "../typechain-types/contracts/Store";
-import { storeAddress } from "./const";
+import { storeAddress } from "../const";
 
 async function main() {
   const store = await ethers.getContractAt("Store", storeAddress);

@@ -15,7 +15,7 @@ const StoreModule = buildModule("StoreModule", (m: any) => {
 
   const acceptedTokenAddress = m.getParameter(
     "acceptedTokenAddress",
-    CELO_TEST_USDC
+    BASE_SEPOLIA_USDC
   );
 
   const Store = m.contract("Store", [StoreEvent, acceptedTokenAddress]);

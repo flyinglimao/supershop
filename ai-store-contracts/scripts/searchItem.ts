@@ -1,5 +1,5 @@
 import { ethers } from "hardhat";
-import { storeAddress } from "./const";
+import { storeAddress } from "../const";
 
 async function main() {
   const store = await ethers.getContractAt("Store", storeAddress);

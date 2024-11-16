@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 import { Store } from "../typechain-types/contracts/Store";
-import { storeAddress } from "./const";
+import { base_sepolia_storeAddress } from "../const";
 import { string } from "hardhat/internal/core/params/argumentTypes";
 
 // type ItemInfo = {
@@ -1114,7 +1114,7 @@ const itemList: Store.ItemInfoStruct[] = [
 ];
 
 async function main() {
-  const store = await ethers.getContractAt("Store", storeAddress);
+  const store = await ethers.getContractAt("Store", base_sepolia_storeAddress);
 
   for (const item of itemList) {
     const releaseItemTx = await store.releaseItem(item.itemId, item);
