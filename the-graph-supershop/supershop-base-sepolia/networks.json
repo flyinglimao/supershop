@@ -1,0 +1,8 @@
+{
+  "base-sepolia": {
+    "StoreEvent": {
+      "address": "0x1Fe7556e700ED09C0dDb5d9482b7D0c5E477a10c",
+      "startBlock": 18002641
+    }
+  }
+}

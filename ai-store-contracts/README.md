@@ -64,3 +64,28 @@ https://celo-alfajores.blockscout.com/address/0x55D30Ba332AdA10478e5aBbcA3400253
 
 store verified:
 https://celo-alfajores.blockscout.com/address/0x15A580c90B10bF98dFe66f28B8e96D08150Cb6a4#code
+
+networks: base sepolia
+StoreEvent: 0x1Fe7556e700ED09C0dDb5d9482b7D0c5E477a10c
+Store: 0x63706656297A7A94fE052819477BADa37c719F39
+test USDC: 0x036CbD53842c5426634e7929541eC2318f3dCF7e
+
+event verified:
+https://sepolia.basescan.org/address/0x1Fe7556e700ED09C0dDb5d9482b7D0c5E477a10c#code
+
+store verified:
+https://sepolia.basescan.org/address/0x63706656297A7A94fE052819477BADa37c719F39#code
+
+
+
+
+networks: polygonAmoy
+StoreEvent: 0x4fc6E2d500FCA4d55ca971927A1301A5648E95E9
+Store: 0xc201Ab5F4e6509312A4B7BEAe19acE56091B86B4
+test USDC: 0x41E94Eb019C0762f9Bfcf9Fb1E58725BfB0e7582
+
+event verified:
+https://amoy.polygonscan.com/address/0x4fc6E2d500FCA4d55ca971927A1301A5648E95E9#code
+
+store verified:
+https://amoy.polygonscan.com/address/0xc201Ab5F4e6509312A4B7BEAe19acE56091B86B4#code

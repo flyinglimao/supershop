@@ -1,8 +1,16 @@
 import { vars, type HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-verify";
 import "xdeployer";
 
 const config: HardhatUserConfig = {
+  sourcify: {
+    enabled: true,
+    // Optional: specify a different Sourcify server
+    apiUrl: "https://sourcify.dev/server",
+    // Optional: specify a different Sourcify repository
+    browserUrl: "https://repo.sourcify.dev",
+  },
   solidity: {
     version: "0.8.27",
     settings: {
@@ -17,8 +25,18 @@ const config: HardhatUserConfig = {
       alfajores: "empty",
       optimismSepolia: vars.get("SEPOLIA_OP_ETHERSCAN_API_KEY"),
       sepolia: vars.get("ETHERSCAN_API_KEY"),
+      baseSepolia: vars.get("BASE_SEPOLIA_ETHERSCAN_API_KEY"),
+      polygonAmoy: vars.get("AMOY_ETHERSCAN_API_KEY"),
     },
     customChains: [
+      {
+        network: "polygonAmoy",
+        chainId: 80002,
+        urls: {
+          apiURL: "https://api-amoy.polygonscan.com/api",
+          browserURL: "https://amoy.polygonscan.com",
+        },
+      },
       {
         network: "alfajores",
         chainId: 44787,
@@ -46,6 +64,10 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
+    polygonAmoy: {
+      url: "https://rpc-amoy.polygon.technology/",
+      accounts: [vars.get("INITIAL_OWNER_PRIVATE_KEY")],
+    },
     sepolia: {
       url: `https://eth-sepolia.g.alchemy.com/v2/${vars.get(
         "ALCHEMY_API_KEY"
