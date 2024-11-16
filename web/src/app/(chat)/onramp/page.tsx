@@ -7,6 +7,8 @@ import logo from "@/app/_assets/logo.png";
 import dropdown from "@/app/_assets/dropdown.png";
 import diamond from "@/app/_assets/diamond.png";
 import { useRouter } from "next/navigation";
+import { getOnrampBuyUrl } from "@coinbase/onchainkit/fund";
+import { useState } from "react";
 
 function getShortenAddress(address: string) {
   return `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -15,6 +17,17 @@ function getShortenAddress(address: string) {
 export default function Register() {
   const kernel = useKernelClient();
   const router = useRouter();
+  const [showCopied, setShowCopied] = useState(false);
+
+  const onrampBuyUrl = kernel?.account.address
+    ? getOnrampBuyUrl({
+        projectId: process.env.NEXT_PUBLIC_CDP_PROJECT_ID,
+        addresses: { [kernel.account.address]: ["base"] },
+        assets: ["USDC"],
+        presetFiatAmount: 20,
+        fiatCurrency: "USD",
+      })
+    : null;
 
   return (
     <div className="px-4 min-h-screen">
@@ -45,14 +58,21 @@ export default function Register() {
         <button
           className="text-black rounded-full bg-primary p-4 w-full font-semibold disabled:opacity-50"
           type="button"
+          onClick={() => {
+            if (!kernel?.account.address) return;
+            navigator.clipboard.writeText(kernel?.account.address);
+            setShowCopied(true);
+          }}
         >
           Deposit with Crypto
         </button>
         <button
           className="text-black rounded-full bg-primary p-4 w-full font-semibold disabled:opacity-50"
           type="button"
+          disabled={!onrampBuyUrl}
+          onClick={() => (onrampBuyUrl ? open(onrampBuyUrl, "_blank") : null)}
         >
-          Deposit with Credit Card
+          Deposit with Coinbase
         </button>
         <button
           className="text-black w-full relative text-center"
@@ -68,6 +88,28 @@ export default function Register() {
         <span>|</span>
         <a href="#">Privacy Policy</a>
       </footer>
+      {showCopied ? (
+        <div
+          className="bg-black/40 fixed top-0 left-0 w-screen h-screen z-50 grid place-items-center"
+          onClick={() => setShowCopied(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="p-8 rounded-3xl bg-white"
+          >
+            <p className="text-black text-center mb-8 text-lg font-semibold">
+              Address copied to clipboard
+            </p>
+            <button
+              className="text-black rounded-full bg-primary p-2 w-full font-semibold"
+              type="button"
+              onClick={() => setShowCopied(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
