@@ -1,4 +1,14 @@
 import type { SkillGroup, HandlerContext } from "@xmtp/message-kit";
+import {
+  bytesToHex,
+  decodeAbiParameters,
+  encodeAbiParameters,
+  hexToString,
+  parseAbiParameters,
+  stringToBytes,
+  stringToHex,
+} from "viem";
+import { execute, Item, SearchItemDocument } from "~/.graphclient";
 
 async function handler(context: HandlerContext) {
   const {
@@ -8,9 +18,57 @@ async function handler(context: HandlerContext) {
   } = context;
   switch (skill) {
     case "search":
-      const keyword = params.keyword;
+      const keywords = params.keyword.split(",");
+      const result = await execute(SearchItemDocument, {
+        query: keywords.map((keyword: string) => ({
+          metadata_contains: stringToHex(keyword).slice(2),
+        })),
+      });
+
+      if (result.data.items.length === 0) {
+        context.reply("I can't find any item, please try again.");
+        return;
+      } else {
+        context.reply(
+          JSON.stringify({
+            type: "ItemList",
+            items: result.data.items.map((e: Item) => ({
+              ...e,
+              ...solveMetadata(e.metadata),
+            })),
+          })
+        );
+      }
       return;
   }
+}
+
+const STRING = bytesToHex(stringToBytes("string", { size: 32 }));
+function solveMetadata(metadata: `0x${string}`): object {
+  if (metadata === "0x") return {};
+
+  const [key, type] = decodeAbiParameters(
+    parseAbiParameters("bytes32, bytes32"),
+    metadata
+  );
+  if (type === STRING) {
+    const [, , value] = decodeAbiParameters(
+      parseAbiParameters("bytes32, bytes32, string"),
+      metadata
+    );
+
+    const current = encodeAbiParameters(
+      parseAbiParameters("bytes32, bytes32, string"),
+      [key, type, value]
+    );
+
+    return {
+      [hexToString(key, { size: 32 })]: value,
+      ...solveMetadata(metadata.replace(current, "0x") as `0x${string}`),
+    };
+  }
+
+  throw new Error("Unsupported type");
 }
 
 export const skills: SkillGroup[] = [
@@ -20,8 +78,8 @@ export const skills: SkillGroup[] = [
     description: "Fashion bot for searching goods.",
     skills: [
       {
-        skill: "/search [keyword]",
-        examples: ["/search bangkok t-shirt size:L color:Yellow"],
+        skill: "/search [keywords]",
+        examples: ["/search bangkok,t-shirt,size:L,color:Yellow"],
         description: "Search for goods.",
         handler,
         params: {

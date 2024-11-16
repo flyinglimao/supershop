@@ -8,12 +8,11 @@ import { useKernelClient } from "../../_smartWallet";
 
 import logo from "@/app/_assets/logo.png";
 import menu from "@/app/_assets/menu.png";
-import mic from "@/app/_assets/mic.png";
 import send from "@/app/_assets/send.png";
 import upload from "@/app/_assets/upload.png";
-import { StartChat } from "./StartChat";
-import { useChat, XmtpProvider } from "@/app/_xmtp/Xmtp";
+import { useChat } from "@/app/_xmtp/Xmtp";
 import { Message } from "./Message";
+import { StartChat } from "./StartChat";
 
 export default function Chat() {
   const router = useRouter();
@@ -73,7 +72,7 @@ export default function Chat() {
         )}
       </div>
       <footer className="sticky bottom-0 text-white px-6 pb-6 flex flex-col gap-4 pointer-events-none">
-        <button
+        {/* <button
           type="button"
           className="bg-gradient-to-r from-[#FFC47F] to-[#DF9ECD] rounded-full size-16 grid place-items-center pointer-events-auto"
         >
@@ -83,7 +82,7 @@ export default function Chat() {
             height={mic.height}
             alt="speech to text"
           />
-        </button>
+        </button> */}
         <form
           onSubmit={(e) => {
             e.preventDefault();

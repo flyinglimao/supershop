@@ -1,0 +1,8 @@
+sources:
+  - name: celo
+    handler:
+      graphql:
+        endpoint: https://api.studio.thegraph.com/query/94899/supershop-v1/version/latest
+
+documents:
+  - ./src/agent/*.graphql

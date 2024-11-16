@@ -1,7 +1,7 @@
 "use client";
 
 import { type CachedMessage } from "@xmtp/react-sdk";
-import { isAddressEqual } from "viem";
+import { formatEther, isAddressEqual } from "viem";
 import Image from "next/image";
 
 import avatar from "@/app/_assets/avatar.png";
@@ -13,9 +13,11 @@ export function Message({ message }: { message: CachedMessage }) {
     process.env.NEXT_PUBLIC_AGENT_ADDRESS
   );
 
-  if (isUser) return <TextMessage content={message.content} />;
+  if (isUser && typeof message.content === "string")
+    return <TextMessage content={message.content} />;
+  if (!isUser) return <AgentMessage content={message.content} />;
 
-  return <AgentMessage content={message.content} />;
+  return null;
 }
 
 function TextMessage({ content, isBot }: { content: string; isBot?: boolean }) {
@@ -36,9 +38,71 @@ function TextMessage({ content, isBot }: { content: string; isBot?: boolean }) {
   );
 }
 
-function AgentMessage({ content }: { content: string }) {
-  const type = getMessageType(content);
-  if (type === "text") return <TextMessage content={content} isBot />;
+function AgentMessage({ content }: { content: { content: string } | string }) {
+  if (typeof content === "string") {
+    return <TextMessage content={content} isBot />;
+  }
+
+  const type = getMessageType(content.content);
+  if (type === "text") {
+    return <TextMessage content={content.content} isBot />;
+  }
+  if (type === "ItemList") {
+    return <ItemCardList items={JSON.parse(content.content)["items"]} />;
+  }
+  return null;
+}
+
+function ItemCardList({
+  items,
+}: {
+  items: ({
+    name?: string;
+    price?: string;
+  } & { id: string })[];
+}) {
+  return (
+    <div className="w-full overflow-auto flex px-6 gap-4">
+      {items.map((item) => (
+        <Item key={item["id"]} item={item} />
+      ))}
+    </div>
+  );
+}
+const imageMap = {
+  "ETH T Shirts": "/eth.png",
+  "Celo T shirts": "/celo.png",
+  "Eth pants": "/eth-pant.png",
+  "Base Pants": "/base-pant.png",
+  "Uniswap Pants": "/uniswap-pant.png",
+  "Celo Pants": "/celo-pant.png",
+  "Base T Shirts": "/base.png",
+  "Uniswap T Shirts": "/uniswap.png",
+};
+function Item({
+  item,
+}: {
+  item: {
+    name?: string;
+    price?: string;
+  };
+}) {
+  return (
+    <div className="rounded-3xl bg-white w-48 flex-shrink-0 overflow-hidden pb-2">
+      <Image
+        src={
+          imageMap[item["name"] as keyof typeof imageMap] || "/base-pant.png"
+        }
+        width={192}
+        height={192}
+        alt="item"
+      />
+      <div className="flex flex-col py-1 px-2">
+        <p>{item["name"] || "Product"}</p>
+        <p>${formatEther(BigInt(item["price"] || 0)) || "0"}</p>
+      </div>
+    </div>
+  );
 }
 
 function getMessageType(text: string) {

@@ -1,0 +1,9 @@
+query SearchItem($query: [Item_filter]) {
+  items(where: { or: $query }) {
+    id
+    itemName
+    itemDescription
+    price
+    metadata
+  }
+}
