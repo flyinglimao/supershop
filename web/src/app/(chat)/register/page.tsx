@@ -1,28 +1,15 @@
 "use client";
 
-import Image from "next/image";
-
-import logo from "@/app/_assets/logo.png";
-import robot from "@/app/_assets/robot.png";
-import {
-  DynamicConnectButton,
-  useIsLoggedIn,
-} from "@dynamic-labs/sdk-react-core";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { register } from "../_actions/register";
-import { useKernelClient } from "../_smartWallet";
+import { useState } from "react";
+import { register } from "../../_actions/register";
+import { useKernelClient } from "../../_smartWallet";
 
 export default function Register() {
-  const isLoggedIn = useIsLoggedIn();
   const router = useRouter();
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const kernel = useKernelClient();
-
-  useEffect(() => {
-    if (!isLoggedIn) router.push("/");
-  }, [isLoggedIn]);
 
   function onRegister() {
     if (!kernel?.account) return;

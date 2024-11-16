@@ -3,21 +3,15 @@
 import Image from "next/image";
 
 import logo from "@/app/_assets/logo.png";
-import { useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getUser } from "../_actions/getUser";
-import { useKernelClient } from "../_smartWallet";
+import { getUser } from "../../_actions/getUser";
+import { useKernelClient } from "../../_smartWallet";
 
 export default function Chat() {
-  const isLoggedIn = useIsLoggedIn();
   const router = useRouter();
   const kernel = useKernelClient();
   const [user, setUser] = useState<Awaited<ReturnType<typeof getUser>>>();
-
-  useEffect(() => {
-    if (!isLoggedIn) router.push("/");
-  }, [isLoggedIn]);
 
   useEffect(() => {
     if (!kernel?.account) return;
