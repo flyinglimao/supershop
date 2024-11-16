@@ -34,3 +34,12 @@ yarn@1.22.19 dev
 5. Enjoy!
 ---
 Made with ❤️ by [XMTP](https://xmtp.org)
+
+
+
+
+-----------------------
+
+go to: xmtp.chat
+DM to the address: 0x16e9255123bfc23AA88dFB067fFAC670E5817206
+doc: https://messagekit.ephemerahq.com/quickstart
