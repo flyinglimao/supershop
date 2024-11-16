@@ -9,9 +9,17 @@ export async function register(
   weight: number,
   gender: string
 ) {
-  await prisma.user.create({
-    data: {
+  await prisma.user.upsert({
+    where: {
       address,
+    },
+    create: {
+      address,
+      height,
+      weight,
+      gender,
+    },
+    update: {
       height,
       weight,
       gender,

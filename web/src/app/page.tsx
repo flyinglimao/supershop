@@ -20,7 +20,7 @@ export default function Login() {
   }, [isLoggedIn]);
 
   return (
-    <div className="px-4 min-h-screen">
+    <div className="px-4 pt-16 min-h-screen">
       <header className="flex flex-col gap-6 mt-16 mb-10 w-[21.75rem] max-w-full mx-auto">
         <Image src={logo.src} width={64} height={64} alt="logo" />
         <h2 className="text-4xl text-white font-bold">Create an account</h2>
