@@ -1,12 +1,9 @@
-import { createServer } from "http";
-import { parse } from "url";
-import next from "next";
 import {
-  run,
-  HandlerContext,
-  textGeneration,
   defaultPromptTemplate,
+  HandlerContext,
   processMultilineResponse,
+  run,
+  textGeneration,
 } from "@xmtp/message-kit";
 import { skills } from "./skills";
 
@@ -30,25 +27,30 @@ You are a helpful fashion bot. You can search merchantdise for the user accordin
 }
 
 export function startAgent() {
-  run(async (context: HandlerContext) => {
-    const {
-      message: {
-        content: { text, params },
-        sender,
-      },
-    } = context;
+  run(
+    async (context: HandlerContext) => {
+      const {
+        message: {
+          content: { text, params },
+          sender,
+        },
+      } = context;
 
-    try {
-      let userPrompt = params?.prompt ?? text;
-      const { reply } = await textGeneration(
-        sender.address,
-        userPrompt,
-        await agentPrompt(sender.address)
-      );
-      await processMultilineResponse(sender.address, reply, context);
-    } catch (error) {
-      console.error("Error during OpenAI call:", error);
-      await context.send("An error occurred while processing your request.");
+      try {
+        let userPrompt = params?.prompt ?? text;
+        const { reply } = await textGeneration(
+          sender.address,
+          userPrompt,
+          await agentPrompt(sender.address)
+        );
+        await processMultilineResponse(sender.address, reply, context);
+      } catch (error) {
+        console.error("Error during OpenAI call:", error);
+        await context.send("An error occurred while processing your request.");
+      }
+    },
+    {
+      skills,
     }
-  });
+  );
 }

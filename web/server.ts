@@ -1,14 +1,7 @@
-import { createServer } from "http";
-import { parse } from "url";
-import next from "next";
-import {
-  run,
-  HandlerContext,
-  textGeneration,
-  defaultPromptTemplate,
-  processMultilineResponse,
-} from "@xmtp/message-kit";
 import { startAgent } from "@/agent";
+import { createServer } from "http";
+import next from "next";
+import { parse } from "url";
 
 const port = parseInt(process.env.PORT || "3000", 10);
 const dev = process.env.NODE_ENV !== "production";

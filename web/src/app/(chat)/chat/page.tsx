@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getUser } from "../../_actions/getUser";
 import { useKernelClient } from "../../_smartWallet";
 
-import upload from "@/app/_assets/upload.png";
-import menu from "@/app/_assets/menu.png";
 import logo from "@/app/_assets/logo.png";
+import menu from "@/app/_assets/menu.png";
 import mic from "@/app/_assets/mic.png";
 import send from "@/app/_assets/send.png";
+import upload from "@/app/_assets/upload.png";
 import { useXmtp } from "@/app/_xmtp/useXmtp";
 
 export default function Chat() {
