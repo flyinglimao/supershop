@@ -1,15 +1,19 @@
 import hre from "hardhat";
 import {
-  base_sepolia_storeAddress,
-  base_sepolia_storeEventAddress,
-  base_sepolia_usdc,
+  polygon_amoy_storeAddress,
+  polygon_amoy_storeEventAddress,
+  polygon_amoy_usdc,
 } from "../const";
 
 async function main() {
   /* Verify the contract after deploying */
+  // await hre.run("verify:verify", {
+  //   address: polygon_amoy_storeAddress,
+  //   constructorArguments: [polygon_amoy_storeEventAddress, polygon_amoy_usdc],
+  // });
+
   await hre.run("verify:verify", {
-    address: base_sepolia_storeAddress,
-    constructorArguments: [base_sepolia_storeEventAddress, base_sepolia_usdc],
+    address: polygon_amoy_storeEventAddress,
   });
 }
 

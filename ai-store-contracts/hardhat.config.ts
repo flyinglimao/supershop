@@ -26,8 +26,17 @@ const config: HardhatUserConfig = {
       optimismSepolia: vars.get("SEPOLIA_OP_ETHERSCAN_API_KEY"),
       sepolia: vars.get("ETHERSCAN_API_KEY"),
       baseSepolia: vars.get("BASE_SEPOLIA_ETHERSCAN_API_KEY"),
+      polygonAmoy: vars.get("AMOY_ETHERSCAN_API_KEY"),
     },
     customChains: [
+      {
+        network: "polygonAmoy",
+        chainId: 80002,
+        urls: {
+          apiURL: "https://api-amoy.polygonscan.com/api",
+          browserURL: "https://amoy.polygonscan.com",
+        },
+      },
       {
         network: "alfajores",
         chainId: 44787,
@@ -55,6 +64,10 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
+    polygonAmoy: {
+      url: "https://rpc-amoy.polygon.technology/",
+      accounts: [vars.get("INITIAL_OWNER_PRIVATE_KEY")],
+    },
     sepolia: {
       url: `https://eth-sepolia.g.alchemy.com/v2/${vars.get(
         "ALCHEMY_API_KEY"

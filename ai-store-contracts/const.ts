@@ -10,3 +10,10 @@ export const base_sepolia_storeAddress =
 export const base_sepolia_storeEventAddress =
   "0x1Fe7556e700ED09C0dDb5d9482b7D0c5E477a10c";
 export const base_sepolia_usdc = "0x036CbD53842c5426634e7929541eC2318f3dCF7e";
+
+// polygon amoy
+export const polygon_amoy_storeAddress =
+  "0xc201Ab5F4e6509312A4B7BEAe19acE56091B86B4";
+export const polygon_amoy_storeEventAddress =
+  "0x4fc6E2d500FCA4d55ca971927A1301A5648E95E9";
+export const polygon_amoy_usdc = "0x41E94Eb019C0762f9Bfcf9Fb1E58725BfB0e7582";
