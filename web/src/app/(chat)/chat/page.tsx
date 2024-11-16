@@ -11,12 +11,14 @@ import menu from "@/app/_assets/menu.png";
 import logo from "@/app/_assets/logo.png";
 import mic from "@/app/_assets/mic.png";
 import send from "@/app/_assets/send.png";
+import { useXmtp } from "@/app/_xmtp/useXmtp";
 
 export default function Chat() {
   const router = useRouter();
   const kernel = useKernelClient();
   const [user, setUser] = useState<Awaited<ReturnType<typeof getUser>>>();
   const [input, setInput] = useState("");
+  const xmtp = useXmtp();
 
   useEffect(() => {
     if (!kernel?.account) return;

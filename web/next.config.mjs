@@ -17,7 +17,7 @@ const nextConfig = {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
           },
-          { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
+          // { key: "Cross-Origin-Embedder-Policy", value: "require-corp" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
         ],
       },
@@ -28,7 +28,10 @@ const nextConfig = {
     return config;
   },
   experimental: {
-    serverComponentsExternalPackages: ["@xmtp/user-preferences-bindings-wasm"],
+    serverComponentsExternalPackages: [
+      "@xmtp/user-preferences-bindings-wasm",
+      "@xmtp/wasm-bindings",
+    ],
   },
 };
 
