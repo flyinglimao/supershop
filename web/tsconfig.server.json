@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "dist",
+    "lib": ["es2023"],
+    "target": "es2023",
+    "isolatedModules": false,
+    "noEmit": false
+  },
+  "include": ["server.ts"]
+}
