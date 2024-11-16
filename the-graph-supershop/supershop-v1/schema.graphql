@@ -1,0 +1,57 @@
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RegisterStoreEvent @entity(immutable: true) {
+  id: Bytes!
+  store: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ReleaseItemEvent @entity(immutable: true) {
+  id: Bytes!
+  itemId: BigInt! # uint256
+  price: BigInt! # uint256
+  store: Bytes! # address
+  itemName: String! # string
+  itemDescription: String! # string
+  tags: [String!]! # string[]
+  metadata: Bytes! # bytes
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RemoveItemEvent @entity(immutable: true) {
+  id: Bytes!
+  itemId: BigInt! # uint256
+  store: Bytes! # address
+  itemName: String! # string
+  itemDescription: String! # string
+  tags: [String!]! # string[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Item @entity(immutable: false) {
+  id: String! #store_itemId
+  itemId: BigInt! # uint256
+  price: BigInt! # uint256
+  store: Bytes! # address
+  itemName: String! # string
+  itemDescription: String! # string
+  tags: [String!]! # string[]
+  metadata: Bytes! # bytes
+  active: Boolean! # bool (if release, true, else false)
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

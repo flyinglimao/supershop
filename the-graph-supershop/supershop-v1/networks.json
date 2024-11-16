@@ -1,0 +1,14 @@
+{
+  "sepolia": {
+    "StoreEvent": {
+      "address": "0x98A52058268fe0eB9ED985b8856272c1Ff12b012",
+      "startBlock": 7086598
+    }
+  },
+  "celo-alfajores": {
+    "StoreEvent": {
+      "address": "0x55D30Ba332AdA10478e5aBbcA3400253bD5281E4",
+      "startBlock": 30805493
+    }
+  }
+}
