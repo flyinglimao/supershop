@@ -21,6 +21,7 @@ import { createWalletClient, custom } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { getUser } from "../_actions/getUser";
 import { useKernelClient } from "../_smartWallet";
+import { useRouter } from "next/navigation";
 
 function StreamConversation({
   conversation,
@@ -59,6 +60,7 @@ export function XmtpProvider({ children }: { children: ReactNode }) {
   const { conversations } = useConversations();
   const [conversation, setConversation] = useState<CachedConversation>();
   const { startConversation } = useStartConversation();
+  const router = useRouter();
 
   useEffect(() => {
     let stop = false;
@@ -67,7 +69,7 @@ export function XmtpProvider({ children }: { children: ReactNode }) {
 
       const user = await getUser(kernelClient.account.address);
 
-      if (!user?.chatKey) return;
+      if (!user?.chatKey) return router.push("/register");
       if (stop) return;
 
       const client = createWalletClient({
@@ -77,6 +79,9 @@ export function XmtpProvider({ children }: { children: ReactNode }) {
       await initialize({
         // @ts-ignore
         signer: client,
+        options: {
+          env: "production",
+        },
       });
     }
 

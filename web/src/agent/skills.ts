@@ -6,10 +6,10 @@ async function handler(context: HandlerContext) {
       content: { skill, params, text },
     },
   } = context;
-  if (skill) {
-    console.log(skill, params, text);
-    // Send the URL for the requested game
-    // context.reply("yooooo");
+  switch (skill) {
+    case "search":
+      const keyword = params.keyword;
+      return;
   }
 }
 
