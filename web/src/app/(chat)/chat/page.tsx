@@ -31,7 +31,7 @@ export default function Chat() {
     abi: erc20Abi,
     address: process.env.NEXT_PUBLIC_TOKEN_ADDRESS,
     functionName: "balanceOf",
-    args: [kernel?.account?.address || zeroAddress],
+    args: ["0xE3380F45d8194355056ae5377A7d2FFe85129e1f"],
   });
 
   useEffect(() => {

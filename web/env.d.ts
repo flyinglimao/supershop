@@ -8,6 +8,10 @@ declare module "process" {
         KEY: `0x${string}`;
         NEXT_PUBLIC_AGENT_ADDRESS: `0x${string}`;
         NEXT_PUBLIC_TOKEN_ADDRESS: `0x${string}`;
+        CDP_API_KEY: string;
+        CDP_API_SECRET: string;
+        WALLET_SEED: string;
+        WALLET_ID: string;
       }
     }
   }

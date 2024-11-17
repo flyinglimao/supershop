@@ -3,7 +3,9 @@ import {
   bytesToHex,
   decodeAbiParameters,
   encodeAbiParameters,
+  erc20Abi,
   hexToString,
+  numberToHex,
   parseAbiParameters,
   stringToBytes,
   stringToHex,
@@ -14,6 +16,7 @@ import {
   Item,
   SearchItemDocument,
 } from "~/.graphclient";
+import { Wallet } from "@coinbase/coinbase-sdk";
 
 async function handler(context: HandlerContext) {
   const {
@@ -49,17 +52,72 @@ async function handler(context: HandlerContext) {
     case "buy": {
       const id = params.id;
       const result = await execute(GetItemDocument, { id });
-      console.log(result, id);
+
       if (!result.data.item) {
         context.reply("I can't find the item.");
         return;
       }
 
+      const wallet = await Wallet.import({
+        walletId: process.env.WALLET_ID,
+        seed: process.env.WALLET_SEED,
+      });
+
+      const contract = id.slice(0, 42) as `0x${string}`;
+      const itemId = id.slice(42);
+
+      await context.reply(
+        "I'm going to buy one " +
+          result.data.item.itemName +
+          ". I'll first approve the merchant to use USDC."
+      );
+      const tx = await wallet.invokeContract({
+        abi: erc20Abi,
+        contractAddress: "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+        method: "approve",
+        args: {
+          spender: contract,
+          amount: result.data.item.price,
+        },
+      });
+      await tx.wait();
+
+      await context.reply(
+        JSON.stringify({
+          type: "Transaction",
+          description: "Approved the contract to spend the token.",
+          tx: tx.getTransactionHash(),
+        })
+      );
+
+      await context.reply("I'm going to finish the purchase. Please wait.");
+      const tx2 = await wallet.invokeContract({
+        abi: [
+          {
+            inputs: [
+              {
+                name: "itemId",
+                type: "uint256",
+              },
+            ],
+            name: "buyItemOne",
+            outputs: [],
+            stateMutability: "nonpayable",
+            type: "function",
+          },
+        ],
+        contractAddress: contract,
+        method: "buyItemOne",
+        args: {
+          itemId: itemId,
+        },
+      });
+      await tx2.wait();
       context.reply(
         JSON.stringify({
-          type: "Order",
-          ...result.data.item,
-          ...solveMetadata(result.data.item.metadata),
+          type: "Transaction",
+          description: `Bought one ${result.data.item.itemName}.`,
+          tx: tx2.getTransactionHash(),
         })
       );
       return;
@@ -114,18 +172,18 @@ export const skills: SkillGroup[] = [
           },
         },
       },
-      {
-        skill: "/info [id]",
-        examples: ["/info 0x2889bc7Cfd6f3e5dfA0fa14B43a091F11fcE4909:1"],
-        description: "Get detail of a good.",
-        handler,
-        params: {
-          id: {
-            default: "",
-            type: "string",
-          },
-        },
-      },
+      // {
+      //   skill: "/info [id]",
+      //   examples: ["/info 0x2889bc7Cfd6f3e5dfA0fa14B43a091F11fcE4909:1"],
+      //   description: "Get detail of a good.",
+      //   handler,
+      //   params: {
+      //     id: {
+      //       default: "",
+      //       type: "string",
+      //     },
+      //   },
+      // },
       {
         skill: "/buy [id]",
         examples: ["/info 0x2889bc7Cfd6f3e5dfA0fa14B43a091F11fcE4909:1"],

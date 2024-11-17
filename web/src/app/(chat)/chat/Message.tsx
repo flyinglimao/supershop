@@ -1,20 +1,10 @@
 "use client";
 
-import { type CachedMessage } from "@xmtp/react-sdk";
-import {
-  encodeFunctionData,
-  erc20Abi,
-  formatEther,
-  formatUnits,
-  isAddressEqual,
-  parseEther,
-  parseUnits,
-} from "viem";
-import Image from "next/image";
-
 import avatar from "@/app/_assets/avatar.png";
 import botAvatar from "@/app/_assets/bot-avatar.png";
-import { useKernelClient } from "@/app/_smartWallet";
+import { type CachedMessage } from "@xmtp/react-sdk";
+import Image from "next/image";
+import { formatUnits, isAddressEqual } from "viem";
 
 export function Message({ message }: { message: CachedMessage }) {
   const isUser = !isAddressEqual(
@@ -58,8 +48,8 @@ function AgentMessage({ content }: { content: { content: string } | string }) {
   if (type === "ItemList") {
     return <ItemCardList items={JSON.parse(content.content)["items"]} />;
   }
-  if (type === "Order") {
-    return <BuyItem item={JSON.parse(content.content)} />;
+  if (type === "Transaction") {
+    return <Transaction tx={JSON.parse(content.content)} />;
   }
   return null;
 }
@@ -116,28 +106,22 @@ function Item({
   );
 }
 
-function BuyItem({
-  item,
+function Transaction({
+  tx: { description, tx },
 }: {
-  item: { id: string; name?: string; price?: string };
+  tx: { description: string; tx: string };
 }) {
-  const kernelClient = useKernelClient();
-
   return (
-    <div className="rounded-3xl bg-white w-80 flex-shrink-0 overflow-hidden pb-2">
-      <Image
-        src={
-          imageMap[item["name"] as keyof typeof imageMap] || "/base-pant.png"
-        }
-        width={320}
-        height={320}
-        alt="item"
-      />
-      <div className="flex flex-col py-1 px-2">
-        <p>{item["name"] || "Product"}</p>
-        <p>${formatEther(BigInt(item["price"] || 0)) || "0"}</p>
-        <button className="bg-primary text-white rounded-lg py-1 px-2">
-          Buy
+    <div className="rounded-3xl bg-white w-80 flex-shrink-0 overflow-hidden p-4">
+      <div className="flex flex-col gap-4">
+        <p className="font-semibold">{description}</p>
+        <button
+          className="bg-primary text-white rounded-lg py-1 px-2"
+          onClick={() => {
+            open(`https://base-sepolia.blockscout.com/tx/${tx}`);
+          }}
+        >
+          Check Transaction
         </button>
       </div>
     </div>
